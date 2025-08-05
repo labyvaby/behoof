@@ -1,4 +1,7 @@
-#root {
+ .container {
+    @apply max-w-[1130px] px-[20px] mx-auto box-border;
+} 
+ #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
