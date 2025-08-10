@@ -1,0 +1,258 @@
+.product-section {
+  padding: 20px;
+  background-color: #f5f7fb;
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+
+    .filter {
+      padding: 6px 12px;
+      border-radius: 8px;
+
+      background: #f1f1f1;
+      font-size: 16px;
+      color: #333;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+
+      &.active {
+        background: #ffdee1;
+        color: #f00;
+      }
+
+      .close {
+        margin-left: 0px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 10px);
+    min-width: 280px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #888;
+
+      .category {
+        font-weight: 500px;
+        font-size: 14px;
+      }
+
+      .actions {
+        .icon-heart,
+        .icon-chart {
+          margin-left: 8px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .product-name {
+      font-size: 13.5px;
+      margin: 8px 0;
+      font-weight: 600;
+    }
+
+    .card-body {
+      display: flex;
+      gap: 16px;
+
+      .product-img {
+        width: 90px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .rating-list {
+        flex: 1;
+
+        .rating-row {
+          display: flex;
+          align-items: center;
+          margin-bottom: 6px;
+
+          span {
+            width: 90px;
+            font-size: 12px;
+          }
+
+          .rating-bar {
+            flex: 1;
+            height: 6px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            overflow: hidden;
+
+            .fill {
+              height: 100%;
+              background: #f00;
+              border-radius: 4px 0 0 4px;
+            }
+          }
+        }
+      }
+    }
+  } 
+  
+  .swiper-wrapper-container {
+    position: relative;
+  }
+
+  .custom-swiper-button {
+    position: absolute;
+    bottom: 10px;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 0;
+  }
+
+  .custom-swiper-button.prev {
+    right: 95%;
+    bottom: 45%;
+    transform: translateX(-65px);
+  }
+
+  .custom-swiper-button.next {
+    left: 95%;
+    bottom: 45%;
+    transform: translateX(70px);
+    position: absolute;
+  }
+
+  .custom-swiper-button img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    .filters {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      gap: 12px;
+      padding-bottom: 8px;
+    }
+
+    .mySwiper .card {
+      flex: 0 0 100%;
+      min-width: 100%;
+    }
+
+    .mySwiper .card-body {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .mySwiper .product-img {
+      width: 100px;
+      height: auto;
+    }
+
+    .mySwiper .rating-list {
+      width: auto;
+      flex: 1;
+
+      .rating-row {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 8px;
+
+        span {
+          width: 90px;
+          margin-bottom: 0;
+        }
+
+        .rating-bar {
+          width: calc(100% - 90px);
+          height: 6px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .filters {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      gap: 8px;
+      padding-bottom: 8px;
+    }
+
+    .mySwiper .card {
+      flex: 0 0 100%;
+      min-width: 100%;
+    }
+
+    .mySwiper .card-body {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px; 
+      
+    }
+
+    .mySwiper .product-img {
+      width: 80px;
+      height: auto;
+    }
+
+    .mySwiper .rating-list {
+      width: 100%;
+      flex: 1;
+
+      .product-name {
+        text-align: center;
+        font-size: 12px;
+      }
+      .category {
+        font-weight: 500px;
+        font-size: 12px;
+      }
+
+      .rating-row {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 6px;
+
+        span {
+          width: 80px;
+          margin-bottom: 0;
+          font-size: 12px;
+        }
+
+        .rating-bar {
+          width: calc(100% - 80px);
+          height: 6px;
+        }
+      }
+    }
+  }
+}
