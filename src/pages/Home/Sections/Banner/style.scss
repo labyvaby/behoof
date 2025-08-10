@@ -1,0 +1,82 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Для адаптивности */
+}
+
+.textContainer {
+  flex: 1;
+  min-width: 300px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2;
+}
+
+.title span {
+  color: #ff0000; /* Красный цвет для акцентов */
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button {
+  width: 150px;
+  height: auto;
+}
+
+.phoneContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.phone {
+  width: 150px;
+  height: auto;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .phone {
+    width: 120px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .phone {
+    width: 100px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .button {
+    width: 120px;
+  }
+}
