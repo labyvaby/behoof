@@ -6,13 +6,14 @@
   background: #f9f9f9;
   border-radius: 10px;
   max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap; /* Для адаптивности */
+  margin: 80px auto;
+  flex-wrap: wrap;
 }
 
 .textContainer {
   flex: 1;
   min-width: 300px;
+  margin-left: 5%;
 }
 
 .title {
@@ -23,7 +24,16 @@
 }
 
 .title span {
-  color: #ff0000; /* Красный цвет для акцентов */
+  color: #ff0000;
+}
+.redText {
+  color: red;
+}
+
+.logoContainer {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
 }
 
 .buttons {
@@ -39,15 +49,21 @@
 
 .phoneContainer {
   display: flex;
-  gap: 20px;
+  gap: 4px;
+  align-items: flex-start;
+  margin-right: 10%;
 }
 
 .phone {
   width: 150px;
   height: auto;
+  margin-left: -10px;
 }
 
-/* Адаптивность */
+.phone:last-child {
+  margin-top: 25px;
+}
+
 @media (max-width: 768px) {
   .banner {
     flex-direction: column;
@@ -69,11 +85,27 @@
 
 @media (max-width: 480px) {
   .phone {
-    width: 100px;
+    width: 199px;
+    height: auto;
+  }
+
+  .logoContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .phoneContainer {
+    display: flex;
+    margin-top: 20px;
+    gap: 3px;
+    align-items: flex-start;
+    margin-right: 0%;
   }
 
   .title {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-right: 30%;
   }
 
   .button {
