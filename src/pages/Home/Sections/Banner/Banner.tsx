@@ -4,12 +4,12 @@ import './style.scss';
 const storeLinks = [
     {
         href: 'https://www.apple.com/app-store/',
-        imgSrc: 'src/assets/icons/Banner/icons-Appl Srore.svg',
+        imgSrc: 'src/assets/icons/Новая папка/icons-Appl Srore.svg',
         alt: 'Apple Store'
     },
     {
         href: 'https://play.google.com/store',
-        imgSrc: 'src/assets/icons/Banner/icons-Google.svg',
+        imgSrc: 'src/assets/icons/Новая папка/icons-Google.svg',
         alt: 'Google Play'
     }
 ];
