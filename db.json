@@ -80,5 +80,32 @@
       "priceChange": 5,
       "image": "src/assets/images/NewProducts/img10.png"
     }
+  ] ,
+  "reviews": [
+    {
+      "id": 1,
+      "image": "src/assets/images/Reviews/img1.png",
+      "title": "Обзор устаревших смартфонов",
+      "text": "Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra."
+    },
+    {
+      "id": 2,
+      "image": "src/assets/images/Reviews/img2.png",
+      "title": "Обзор устаревших смартфонов",
+      "text": "Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra."
+    },
+    {
+      "id": 3,
+      "image": "src/assets/images/Reviews/img3.png",
+      "title": "Обзор устаревших смартфонов",
+      "text": "Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra."
+    },
+    {
+      "id": 4,
+      "image": "src/assets/images/Reviews/img4.png",
+      "title": "Обзор устаревших смартфонов",
+      "text": "Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra."
+    }
   ]
+
 }
