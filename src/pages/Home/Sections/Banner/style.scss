@@ -1,0 +1,114 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 80px auto;
+  flex-wrap: wrap;
+}
+
+.textContainer {
+  flex: 1;
+  min-width: 300px;
+  margin-left: 5%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.2;
+}
+
+.title span {
+  color: #ff0000;
+}
+.redText {
+  color: red;
+}
+
+.logoContainer {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button {
+  width: 150px;
+  height: auto;
+}
+
+.phoneContainer {
+  display: flex;
+  gap: 4px;
+  align-items: flex-start;
+  margin-right: 10%;
+}
+
+.phone {
+  width: 150px;
+  height: auto;
+  margin-left: -10px;
+}
+
+.phone:last-child {
+  margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .phone {
+    width: 120px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .phone {
+    width: 199px;
+    height: auto;
+  }
+
+  .logoContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .phoneContainer {
+    display: flex;
+    margin-top: 20px;
+    gap: 3px;
+    align-items: flex-start;
+    margin-right: 0%;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-right: 30%;
+  }
+
+  .button {
+    width: 120px;
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "Электроника",
+      "title": "Apple iPhone 13 Pro Max 256 ГБ серый",
+      "price": 29999,
+      "priceChange": 5,
+      "image": "src/assets/images/NewProducts/img1.png"
+    },
+    {
+      "id": 2,
+      "category": "Электроника",
+      "title": "Apple iPhone 13 Pro Max 256 ГБ серый",
+      "price": 29999,
+      "priceChange": 5,
+      "image": "src/assets/images/NewProducts/img2.png"
+    },
+    {
+      "id": 3,
+      "category": "Электроника",
+      "title": "Apple iPhone 13 Pro Max 256 ГБ серый",
+      "price": 29999,
+      "priceChange": 5,
+      "image": "src/assets/images/NewProducts/img3.png"
+    },
+    {
+      "id": 4,
+      "category": "Электроника",
+      "title": "Apple iPhone 13 Pro Max 256 ГБ серый",
+      "price": 29999,
+      "priceChange": 5,
+      "image": "src/assets/images/NewProducts/img4.png"
+    },
+    {
+      "id": 5,
+      "category": "Электроника",
+      "title": "Apple iPhone 13 Pro Max 256 ГБ серый",
+      "price": 29999,
+      "priceChange": 13,
+      "image": "src/assets/images/NewProducts/img5.png"
+    },
+    {
+      "id": 6,
+      "category": "Электроника",
+      "title": "Apple iPhone 13 Pro Max 256 ГБ серый",
+      "price": 29999,
+      "priceChange": 5,
+      "image": "src/assets/images/NewProducts/img6.png"
+    },
+    {
+      "id": 7,
+      "category": "Электроника",
+      "title": "Apple iPhone 13 Pro Max 256 ГБ серый",
+      "price": 29999,
+      "priceChange": 5,
+      "image": "src/assets/images/NewProducts/img7.png"
+    },
+    {
+      "id": 8,
+      "category": "Электроника",
+      "title": "Apple iPhone 13 Pro Max 256 ГБ серый",
+      "price": 29999,
+      "priceChange": 5,
+      "image": "src/assets/images/NewProducts/img8.png"
+    },
+    {
+      "id": 9,
+      "category": "Электроника",
+      "title": "Apple iPhone 13 Pro Max 256 ГБ серый",
+      "price": 29999,
+      "priceChange": 5,
+      "image": "src/assets/images/NewProducts/img9.png"
+    },
+    {
+      "id": 10,
+      "category": "Электроника",
+      "title": "Apple iPhone 13 Pro Max 256 ГБ серый",
+      "price": 29999,
+      "priceChange": 5,
+      "image": "src/assets/images/NewProducts/img10.png"
+    }
+  ] ,
+  "reviews": [
+    {
+      "id": 1,
+      "image": "src/assets/images/Reviews/img1.png",
+      "title": "Обзор устаревших смартфонов",
+      "text": "Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra."
+    },
+    {
+      "id": 2,
+      "image": "src/assets/images/Reviews/img2.png",
+      "title": "Обзор устаревших смартфонов",
+      "text": "Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra."
+    },
+    {
+      "id": 3,
+      "image": "src/assets/images/Reviews/img3.png",
+      "title": "Обзор устаревших смартфонов",
+      "text": "Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra."
+    },
+    {
+      "id": 4,
+      "image": "src/assets/images/Reviews/img4.png",
+      "title": "Обзор устаревших смартфонов",
+      "text": "Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra."
+    }
+  ]
+
+}
