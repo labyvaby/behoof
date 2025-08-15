@@ -7,7 +7,7 @@ const { Header, Content, Footer } = Layout;
 export default function AppLayout() {
   return (
     <Layout>
-      <Header style={{ color: 'white' }}>My App</Header> 
+      <Header style={{ color: '#1c1b1bff' }}>My App</Header> 
       <Hero /> 
       <Content style={{ padding: '20px' }}>
         <Outlet />

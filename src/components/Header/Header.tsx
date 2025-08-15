@@ -7,8 +7,12 @@ export default function Header() {
     <header className="header">
       <Container>
         <img src={logo} alt="logo" />
-      </Container>
+      </Container> 
+       <div className="header__content">  
+        <h1>Behoof</h1>
+        <p>Behoof is a platform for creating and sharing interactive educational content.</p>
+       </div>
     </header>
   );
 }
-
+ 
