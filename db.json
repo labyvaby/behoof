@@ -106,6 +106,155 @@
       "title": "Обзор устаревших смартфонов",
       "text": "Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra."
     }
+  ],  
+  
+"categories": [
+    {
+      "name": "Смартфоны",
+      "subcategories": [
+        {
+          "name": "Все смартфоны",
+          "products": [
+            { "name": "iPhone 14" },
+            { "name": "Samsung Galaxy S23" },
+            { "name": "Xiaomi 13 Pro" }
+          ]
+        },
+        {
+          "name": "Новинки смартфонов",
+          "badge": "New",
+          "products": [
+            { "name": "iPhone 15" },
+            { "name": "Xiaomi 14" },
+            { "name": "Samsung Galaxy S24" }
+          ]
+        },
+        {
+          "name": "Недорогие смартфоны",
+          "products": [
+            { "name": "Xiaomi Redmi 12" },
+            { "name": "Realme C35" },
+            { "name": "INFINIX Hot 20" }
+          ]
+        },
+        {
+          "name": "Apple",
+          "subcategories": [
+            {
+              "name": "iPhone 14 Series",
+              "products": [
+                { "name": "iPhone 14 Pro Max" },
+                { "name": "iPhone 14 Pro" },
+                { "name": "iPhone 14 Plus" },
+                { "name": "iPhone 14" }
+              ]
+            },
+            {
+              "name": "iPhone 13 Series",
+              "products": [
+                { "name": "iPhone 13 Pro Max" },
+                { "name": "iPhone 13 Pro" },
+                { "name": "iPhone 13" },
+                { "name": "iPhone 13 Mini" }
+              ]
+            },
+            {
+              "name": "iPhone 12 Series",
+              "products": [
+                { "name": "iPhone 12" },
+                { "name": "iPhone 12 Mini" }
+              ]
+            }
+          ]
+        },
+        { "name": "Xiaomi", "products": [{ "name": "Xiaomi 13" }, { "name": "Xiaomi 12" }] },
+        { "name": "Samsung", "products": [{ "name": "Samsung S23" }, { "name": "Samsung S22" }] },
+        { "name": "HONOR", "products": [{ "name": "HONOR Magic 6" }] },
+        { "name": "Realme", "products": [{ "name": "Realme GT 3" }] },
+        { "name": "Tecno", "products": [{ "name": "Tecno Camon 20" }] },
+        { "name": "INFINIX", "products": [{ "name": "INFINIX Zero 6" }] },
+        { "name": "POCO", "products": [{ "name": "POCO X5" }] }
+      ]
+    },
+    {
+      "name": "Ноутбуки",
+      "products": [
+        { "name": "MacBook Air M2" },
+        { "name": "Dell XPS 13" },
+        { "name": "HP Spectre x360" }
+      ]
+    },
+    {
+      "name": "Планшеты",
+      "products": [
+        { "name": "iPad Pro 12.9" },
+        { "name": "Samsung Galaxy Tab S8" }
+      ]
+    },
+    {
+      "name": "Умные часы",
+      "products": [
+        { "name": "Apple Watch Series 9" },
+        { "name": "Samsung Galaxy Watch 6" }
+      ]
+    },
+    {
+      "name": "Игровые приставки",
+      "products": [
+        { "name": "PlayStation 5" },
+        { "name": "Xbox Series X" },
+        { "name": "Nintendo Switch" }
+      ]
+    },
+    {
+      "name": "Наушники",
+      "products": [
+        { "name": "AirPods Pro 2" },
+        { "name": "Sony WH-1000XM5" },
+        { "name": "Bose QuietComfort 45" }
+      ]
+    },
+    {
+      "name": "Портативные колонки",
+      "products": [
+        { "name": "JBL Flip 6" },
+        { "name": "Sony SRS-XB33" }
+      ]
+    },
+    {
+      "name": "Мониторы",
+      "products": [
+        { "name": "Dell Ultrasharp U2723Q" },
+        { "name": "LG UltraGear 27GN950" }
+      ]
+    },
+    {
+      "name": "Принтеры и сканеры",
+      "products": [
+        { "name": "Canon Pixma G7020" },
+        { "name": "HP LaserJet Pro M404dn" }
+      ]
+    },
+    {
+      "name": "Планшеты и электронные книги",
+      "products": [
+        { "name": "Kindle Paperwhite" },
+        { "name": "PocketBook InkPad 4" }
+      ]
+    },
+    {
+      "name": "Корпуса и блоки питания",
+      "products": [
+        { "name": "NZXT H510" },
+        { "name": "Corsair RM850x" }
+      ]
+    },
+    {
+      "name": "Аксессуары",
+      "products": [
+        { "name": "Зарядное устройство" },
+        { "name": "Чехол для смартфона" }
+      ]
+    }
   ]
-
 }
