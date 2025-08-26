@@ -3,16 +3,18 @@ import ProductCardList from './Home/Sections/ProductCardList/ProductCardList';
 import Global from './Home/Sections/Global/Global';
 import Banner from './Home/Sections/Banner/Banner'; 
 import NewProducts from './Home/Sections/NewProducts/NewProducts'; 
-import  Reviews  from './Home/Sections/Reviews/Reviews';
+import  Reviews  from './Home/Sections/Reviews/Reviews';   
+import Hero from '../components/Hero/Hero';
 export default function Home() {
-  return (
-    <div>
+  return (  
+    <div> 
+      <Hero/>
       <BestChoice />
       <ProductCardList />
       <Global />
       <Banner />   
       <NewProducts  /> 
-      <Reviews/>
+      <Reviews/> 
     </div>
   );
 }
