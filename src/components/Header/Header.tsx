@@ -29,169 +29,174 @@ const Header: React.FC = () => {
   useEffect(() => {
     fetch("http://localhost:3000/categories")
       .then((res) => res.json())
-      .then((data) => setCategories(data));
+      .then(setCategories);
   }, []);
 
   return (
-    <header className="header">
-      <div className="header__container">
-        <div className="header__logo">
-          <img src={logo} alt="Behoof" className="header__logo-icon" />
-          <div className="header__logo-text">
-            <span className="header__title">Behoof</span>
-            <span className="header__subtitle">
-              Лучшие цены <br /> в интернет-магазинах
-            </span>
-          </div>
-        </div>
-        <div className="header__middle">
-          <button
-            className="header__catalog"
-            onClick={() => setIsCatalogOpen(!isCatalogOpen)}
-          >
-            Каталог товаров ▾
-          </button>
-          <div className="header__search">
-            <Search className="header__search-icon" />
-            <input
-              type="text"
-              placeholder="Поиск товаров"
-              className="header__search-input"
-            />
-          </div>
-        </div>
+    <>
+      <header className="header">
+        <Container>
+          <div className="header__content">
+            <div className="header__logo">
+              <img src={logo} alt="Behoof" className="header__logo-icon" />
+              <div className="header__logo-text">
+                <span className="header__title">Behoof</span>
+              </div>
+                <span className="header__subtitle">
+                  Лучшие цены <br /> в интернет-магазинах
+                </span>
+            </div>
 
-        <div className="header__icons">
-          <button className="header__icon">
-            <Heart />
-          </button>
-          <button className="header__icon">
-            <BarChart2 />
-          </button>
-          <button className="header__icon">
-            <User />
-          </button>
-        </div>
-      </div>
-      <Container children={undefined}>
-        
-      </Container>
-      {isCatalogOpen && (
-        <div className="catalog">
-          <div className="catalog__column">
-            <div className="catalog__title">Каталог товаров</div>
-            <ul className="catalog__list">
-              {categories.map((cat, i) => (
-                <li
-                  key={i}
-                  className={`catalog__item ${
-                    activeCategory === cat ? "active" : ""
-                  }`}
-                  onMouseEnter={() => {
-                    setActiveCategory(cat);
-                    setActiveSubcategory(null);
-                    setActiveSubSubcategory(null);
-                  }}
-                >
-                  <span>{cat.name}</span>
-                  {(cat.subcategories || cat.products) && (
-                    <ChevronRight
-                      className={`arrow ${
-                        activeCategory === cat ? "rotate" : ""
-                      }`}
-                      size={16}
-                    />
-                  )}
-                </li>
+            {/* Средняя часть (каталог + поиск) */}
+            <div className="header__middle">
+              <button
+                className="header__catalog"
+                onClick={() => setIsCatalogOpen(!isCatalogOpen)}
+              >
+                Каталог товаров ▾
+              </button>
+
+              <div className="header__search">
+                <Search className="header__search-icon" />
+                <input
+                  type="text"
+                  placeholder="Поиск товаров"
+                  className="header__search-input"
+                />
+              </div>
+            </div>
+
+            {/* Иконки */}
+            <div className="header__icons">
+              {[Heart, BarChart2, User].map((Icon, idx) => (
+                <button key={idx} className="header__icon">
+                  <Icon />
+                </button>
               ))}
-            </ul>
+            </div>
           </div>
-
-          {activeCategory && (
+        </Container>
+        {isCatalogOpen && (
+          <div className="catalog">
+            {/* 1 уровень */}
             <div className="catalog__column">
-              <div className="catalog__title">{activeCategory.name}</div>
+              <div className="catalog__title">Каталог товаров</div>
               <ul className="catalog__list">
-                {activeCategory.subcategories?.map((sub, j) => (
+                {categories.map((cat, i) => (
                   <li
-                    key={j}
+                    key={i}
                     className={`catalog__item ${
-                      activeSubcategory === sub ? "active" : ""
+                      activeCategory === cat ? "active" : ""
                     }`}
                     onMouseEnter={() => {
-                      setActiveSubcategory(sub);
+                      setActiveCategory(cat);
+                      setActiveSubcategory(null);
                       setActiveSubSubcategory(null);
                     }}
                   >
-                    <span>{sub.name}</span>
-                    {sub.badge && <span className="badge">{sub.badge}</span>}
-                    {(sub.subcategories || sub.products) && (
+                    <span>{cat.name}</span>
+                    {(cat.subcategories || cat.products) && (
                       <ChevronRight
                         className={`arrow ${
-                          activeSubcategory === sub ? "rotate" : ""
+                          activeCategory === cat ? "rotate" : ""
                         }`}
                         size={16}
                       />
                     )}
                   </li>
                 ))}
-
-                {activeCategory.products?.map((p, j) => (
-                  <li key={j} className="catalog__item">
-                    {p.name}
-                  </li>
-                ))}
               </ul>
             </div>
-          )}
 
-          {activeSubcategory && (
-            <div className="catalog__column">
-              <div className="catalog__title">{activeSubcategory.name}</div>
-              <ul className="catalog__list">
-                {activeSubcategory.subcategories?.map((sub2, k) => (
-                  <li
-                    key={k}
-                    className={`catalog__item ${
-                      activeSubSubcategory === sub2 ? "active" : ""
-                    }`}
-                    onMouseEnter={() => setActiveSubSubcategory(sub2)}
-                  >
-                    {sub2.name}
-                    {(sub2.subcategories || sub2.products) && (
-                      <ChevronRight
-                        className={`arrow ${
-                          activeSubSubcategory === sub2 ? "rotate" : ""
-                        }`}
-                        size={16}
-                      />
-                    )}
-                  </li>
-                ))}
+            {/* 2 уровень */}
+            {activeCategory && (
+              <div className="catalog__column">
+                <div className="catalog__title">{activeCategory.name}</div>
+                <ul className="catalog__list">
+                  {activeCategory.subcategories?.map((sub, j) => (
+                    <li
+                      key={j}
+                      className={`catalog__item ${
+                        activeSubcategory === sub ? "active" : ""
+                      }`}
+                      onMouseEnter={() => {
+                        setActiveSubcategory(sub);
+                        setActiveSubSubcategory(null);
+                      }}
+                    >
+                      <span>{sub.name}</span>
+                      {sub.badge && <span className="badge">{sub.badge}</span>}
+                      {(sub.subcategories || sub.products) && (
+                        <ChevronRight
+                          className={`arrow ${
+                            activeSubcategory === sub ? "rotate" : ""
+                          }`}
+                          size={16}
+                        />
+                      )}
+                    </li>
+                  ))}
+                  {activeCategory.products?.map((p, j) => (
+                    <li key={j} className="catalog__item">
+                      {p.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-                {activeSubcategory.products?.map((p, k) => (
-                  <li key={k} className="catalog__item">
-                    {p.name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+            {/* 3 уровень */}
+            {activeSubcategory && (
+              <div className="catalog__column">
+                <div className="catalog__title">{activeSubcategory.name}</div>
+                <ul className="catalog__list">
+                  {activeSubcategory.subcategories?.map((sub2, k) => (
+                    <li
+                      key={k}
+                      className={`catalog__item ${
+                        activeSubSubcategory === sub2 ? "active" : ""
+                      }`}
+                      onMouseEnter={() => setActiveSubSubcategory(sub2)}
+                    >
+                      {sub2.name}
+                      {(sub2.subcategories || sub2.products) && (
+                        <ChevronRight
+                          className={`arrow ${
+                            activeSubSubcategory === sub2 ? "rotate" : ""
+                          }`}
+                          size={16}
+                        />
+                      )}
+                    </li>
+                  ))}
+                  {activeSubcategory.products?.map((p, k) => (
+                    <li key={k} className="catalog__item">
+                      {p.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-          {activeSubSubcategory && (
-            <div className="catalog__column">
-              <div className="catalog__title">{activeSubSubcategory.name}</div>
-              <ul className="catalog__list">
-                {activeSubSubcategory.products?.map((p, m) => (
-                  <li key={m} className="catalog__item">
-                    {p.name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
-    </header>
+            {/* 4 уровень */}
+            {activeSubSubcategory && (
+              <div className="catalog__column">
+                <div className="catalog__title">
+                  {activeSubSubcategory.name}
+                </div>
+                <ul className="catalog__list">
+                  {activeSubSubcategory.products?.map((p, m) => (
+                    <li key={m} className="catalog__item">
+                      {p.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+      </header>
+    </>
   );
 };
 

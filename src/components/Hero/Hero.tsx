@@ -1,15 +1,14 @@
 import React from "react";
-import "./style.scss"; 
+import "./style.scss";
 
 const Hero: React.FC = () => {
   return (
-    <section className="hero"> 
-    
+    <section className="hero">
       <div className="hero-block">
         <h1>
           1.8 млн <span className="black-text">товаров в</span> 2272{" "}
           <span className="black-text">магазинах</span>
-        </h1> 
+        </h1>
         <p>найди, сравни, выбирай!</p>
         <button className="hero-button">
           Перейти к категориям
