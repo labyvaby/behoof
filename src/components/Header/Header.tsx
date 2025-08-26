@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Container from "../Сontainer/Container";
 import "./style.scss";
 import logo from "../../assets/logo.svg";
 import { Search, Heart, BarChart2, User, ChevronRight } from "lucide-react";
@@ -19,18 +20,20 @@ const Header: React.FC = () => {
   const [isCatalogOpen, setIsCatalogOpen] = useState(false);
 
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
-  const [activeSubcategory, setActiveSubcategory] = useState<Category | null>(null);
-  const [activeSubSubcategory, setActiveSubSubcategory] = useState<Category | null>(null);
+  const [activeSubcategory, setActiveSubcategory] = useState<Category | null>(
+    null
+  );
+  const [activeSubSubcategory, setActiveSubSubcategory] =
+    useState<Category | null>(null);
 
   useEffect(() => {
     fetch("http://localhost:3000/categories")
       .then((res) => res.json())
-      .then((data) => setCategories(data))
+      .then((data) => setCategories(data));
   }, []);
 
   return (
     <header className="header">
-      {/* верхняя часть */}
       <div className="header__container">
         <div className="header__logo">
           <img src={logo} alt="Behoof" className="header__logo-icon" />
@@ -41,30 +44,38 @@ const Header: React.FC = () => {
             </span>
           </div>
         </div>
-
-        <button
-          className="header__catalog"
-          onClick={() => setIsCatalogOpen(!isCatalogOpen)}
-        >
-          Каталог товаров ▾
-        </button>
-
-        <div className="header__search">
-          <Search className="header__search-icon" />
-          <input
-            type="text"
-            placeholder="Поиск товаров"
-            className="header__search-input"
-          />
+        <div className="header__middle">
+          <button
+            className="header__catalog"
+            onClick={() => setIsCatalogOpen(!isCatalogOpen)}
+          >
+            Каталог товаров ▾
+          </button>
+          <div className="header__search">
+            <Search className="header__search-icon" />
+            <input
+              type="text"
+              placeholder="Поиск товаров"
+              className="header__search-input"
+            />
+          </div>
         </div>
 
         <div className="header__icons">
-          <button className="header__icon"><Heart /></button>
-          <button className="header__icon"><BarChart2 /></button>
-          <button className="header__icon"><User /></button>
+          <button className="header__icon">
+            <Heart />
+          </button>
+          <button className="header__icon">
+            <BarChart2 />
+          </button>
+          <button className="header__icon">
+            <User />
+          </button>
         </div>
       </div>
-
+      <Container children={undefined}>
+        
+      </Container>
       {isCatalogOpen && (
         <div className="catalog">
           <div className="catalog__column">
@@ -73,7 +84,9 @@ const Header: React.FC = () => {
               {categories.map((cat, i) => (
                 <li
                   key={i}
-                  className={`catalog__item ${activeCategory === cat ? "active" : ""}`}
+                  className={`catalog__item ${
+                    activeCategory === cat ? "active" : ""
+                  }`}
                   onMouseEnter={() => {
                     setActiveCategory(cat);
                     setActiveSubcategory(null);
@@ -83,7 +96,9 @@ const Header: React.FC = () => {
                   <span>{cat.name}</span>
                   {(cat.subcategories || cat.products) && (
                     <ChevronRight
-                      className={`arrow ${activeCategory === cat ? "rotate" : ""}`}
+                      className={`arrow ${
+                        activeCategory === cat ? "rotate" : ""
+                      }`}
                       size={16}
                     />
                   )}
@@ -99,7 +114,9 @@ const Header: React.FC = () => {
                 {activeCategory.subcategories?.map((sub, j) => (
                   <li
                     key={j}
-                    className={`catalog__item ${activeSubcategory === sub ? "active" : ""}`}
+                    className={`catalog__item ${
+                      activeSubcategory === sub ? "active" : ""
+                    }`}
                     onMouseEnter={() => {
                       setActiveSubcategory(sub);
                       setActiveSubSubcategory(null);
@@ -109,7 +126,9 @@ const Header: React.FC = () => {
                     {sub.badge && <span className="badge">{sub.badge}</span>}
                     {(sub.subcategories || sub.products) && (
                       <ChevronRight
-                        className={`arrow ${activeSubcategory === sub ? "rotate" : ""}`}
+                        className={`arrow ${
+                          activeSubcategory === sub ? "rotate" : ""
+                        }`}
                         size={16}
                       />
                     )}
@@ -132,13 +151,17 @@ const Header: React.FC = () => {
                 {activeSubcategory.subcategories?.map((sub2, k) => (
                   <li
                     key={k}
-                    className={`catalog__item ${activeSubSubcategory === sub2 ? "active" : ""}`}
+                    className={`catalog__item ${
+                      activeSubSubcategory === sub2 ? "active" : ""
+                    }`}
                     onMouseEnter={() => setActiveSubSubcategory(sub2)}
                   >
                     {sub2.name}
                     {(sub2.subcategories || sub2.products) && (
                       <ChevronRight
-                        className={`arrow ${activeSubSubcategory === sub2 ? "rotate" : ""}`}
+                        className={`arrow ${
+                          activeSubSubcategory === sub2 ? "rotate" : ""
+                        }`}
                         size={16}
                       />
                     )}
