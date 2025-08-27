@@ -1,15 +1,15 @@
 .header {
   background: #fff;
-//box-shadow: 0 0px 4px rgba(0, 0, 0, 0.05);
+  //box-shadow: 0 0px 4px rgba(0, 0, 0, 0.05);
 
-  &__container {
+  &__content {
     max-width: 1200px;
-    margin: 0 auto; 
-    padding: 8px 20px; 
+    margin: 0 auto;
+    padding: 8px 20px;
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: space-between;
-    //gap: 16px;
+    gap: 20px;
   }
 
   &__logo {
@@ -22,34 +22,38 @@
       height: 32px;
     }
 
-    &-text {
+    .header__logo-text {
       display: flex;
-      flex-direction: column;
-      gap: 4px;
+      flex-direction: row; 
+      align-items: center; 
+      gap: 10px; 
     }
   }
 
-  &__title {
+  .header__title {
     font-weight: bold;
     font-size: 34px;
     color: #222;
   }
 
-  &__subtitle {
+  .header__subtitle {
     font-size: 14px;
     color: #263141;
-    white-space: nowrap;
+    white-space: nowrap; 
   }
 
   &__middle {
     display: flex;
+    align-items: center;
+    gap: 0px;
+    flex: 1; 
   }
   &__search {
     display: flex;
     align-items: center;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    padding: 3px 3px; 
+    padding: 3px 3px;
     background: #f2f5f9;
 
     &-icon {
@@ -71,7 +75,7 @@
     position: absolute;
     top: 65px;
     left: 60px;
-    width: 90%; 
+    width: 90%;
     max-width: 1200px;
     background: #fff;
     border: 1px solid #eee;
@@ -199,7 +203,8 @@
 
   &__icons {
     display: flex;
-    gap: 20px;
+    justify-content: flex-end;
+    gap: 10px;
   }
 
   &__icon {
@@ -224,7 +229,7 @@
   }
 
   @media (max-width: 768px) {
-    &__content{
+    &__content {
       flex-wrap: wrap;
     }
     &__icons {
@@ -235,7 +240,7 @@
       display: none;
     }
     &__search {
-      display: none;
+      display: flex;
     }
     &__icons {
       display: none;

@@ -37,14 +37,15 @@ const Header: React.FC = () => {
       <header className="header">
         <Container>
           <div className="header__content">
+            {/* Лого + текст */}
             <div className="header__logo">
               <img src={logo} alt="Behoof" className="header__logo-icon" />
               <div className="header__logo-text">
                 <span className="header__title">Behoof</span>
-              </div>
                 <span className="header__subtitle">
                   Лучшие цены <br /> в интернет-магазинах
                 </span>
+              </div>
             </div>
 
             {/* Средняя часть (каталог + поиск) */}
@@ -75,6 +76,10 @@ const Header: React.FC = () => {
               ))}
             </div>
           </div>
+
+
+
+
         </Container>
         {isCatalogOpen && (
           <div className="catalog">
@@ -85,9 +90,8 @@ const Header: React.FC = () => {
                 {categories.map((cat, i) => (
                   <li
                     key={i}
-                    className={`catalog__item ${
-                      activeCategory === cat ? "active" : ""
-                    }`}
+                    className={`catalog__item ${activeCategory === cat ? "active" : ""
+                      }`}
                     onMouseEnter={() => {
                       setActiveCategory(cat);
                       setActiveSubcategory(null);
@@ -97,9 +101,8 @@ const Header: React.FC = () => {
                     <span>{cat.name}</span>
                     {(cat.subcategories || cat.products) && (
                       <ChevronRight
-                        className={`arrow ${
-                          activeCategory === cat ? "rotate" : ""
-                        }`}
+                        className={`arrow ${activeCategory === cat ? "rotate" : ""
+                          }`}
                         size={16}
                       />
                     )}
@@ -116,9 +119,8 @@ const Header: React.FC = () => {
                   {activeCategory.subcategories?.map((sub, j) => (
                     <li
                       key={j}
-                      className={`catalog__item ${
-                        activeSubcategory === sub ? "active" : ""
-                      }`}
+                      className={`catalog__item ${activeSubcategory === sub ? "active" : ""
+                        }`}
                       onMouseEnter={() => {
                         setActiveSubcategory(sub);
                         setActiveSubSubcategory(null);
@@ -128,9 +130,8 @@ const Header: React.FC = () => {
                       {sub.badge && <span className="badge">{sub.badge}</span>}
                       {(sub.subcategories || sub.products) && (
                         <ChevronRight
-                          className={`arrow ${
-                            activeSubcategory === sub ? "rotate" : ""
-                          }`}
+                          className={`arrow ${activeSubcategory === sub ? "rotate" : ""
+                            }`}
                           size={16}
                         />
                       )}
@@ -153,17 +154,15 @@ const Header: React.FC = () => {
                   {activeSubcategory.subcategories?.map((sub2, k) => (
                     <li
                       key={k}
-                      className={`catalog__item ${
-                        activeSubSubcategory === sub2 ? "active" : ""
-                      }`}
+                      className={`catalog__item ${activeSubSubcategory === sub2 ? "active" : ""
+                        }`}
                       onMouseEnter={() => setActiveSubSubcategory(sub2)}
                     >
                       {sub2.name}
                       {(sub2.subcategories || sub2.products) && (
                         <ChevronRight
-                          className={`arrow ${
-                            activeSubSubcategory === sub2 ? "rotate" : ""
-                          }`}
+                          className={`arrow ${activeSubSubcategory === sub2 ? "rotate" : ""
+                            }`}
                           size={16}
                         />
                       )}
