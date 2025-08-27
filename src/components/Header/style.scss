@@ -24,14 +24,14 @@
 
     &-text {
       display: flex;
-      align-items: center;
-      gap: 6px;
+      flex-direction: column;
+      gap: 4px;
     }
   }
 
   &__title {
     font-weight: bold;
-    font-size: 34.4px;
+    font-size: 34px;
     color: #222;
   }
 
@@ -40,6 +40,7 @@
     color: #263141;
     white-space: nowrap;
   }
+
   &__middle {
     display: flex;
   }
@@ -73,11 +74,11 @@
     width: 90%; 
     max-width: 1200px;
     background: #fff;
-    border: 1px solid #eee; 
+    border: 1px solid #eee;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     gap: 30px;
-    padding: 20px; 
+    padding: 20px;
     z-index: 100;
 
     &__list {
@@ -165,21 +166,46 @@
     border-bottom-left-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+    white-space: nowrap;
 
     &:hover {
       background: #e04344;
     }
   }
 
+  &__search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    border-radius: 8px;
+    padding: 14px 12px;
+    background: #f2f5f9;
+
+    &-icon {
+      width: 18px;
+      height: 18px;
+      color: #999;
+      margin-right: 8px;
+    }
+
+    &-input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      font-size: 14px;
+      outline: none;
+    }
+  }
+
   &__icons {
     display: flex;
-    gap: 8px;
+    gap: 20px;
   }
 
   &__icon {
     border: none;
     background: #f5f5f5;
-    padding: 6px;
+    padding: 16px;
     border-radius: 6px;
     cursor: pointer;
     display: flex;
@@ -197,41 +223,19 @@
     }
   }
 
-  &__search-mobile {
-    display: none;
-    padding: 10px 20px;
-    border-top: 1px solid #f0f0f0;
-
-    @media (max-width: 768px) {
-      display: flex;
-      align-items: center;
-      gap: 6px;
+  @media (max-width: 768px) {
+    &__content{
+      flex-wrap: wrap;
     }
-  }
-
-  @media (max-width: 992px) {
-    &__catalog {
+    &__icons {
       display: none;
     }
-    &__search {
-      display: none;
-    } 
-      &__container {
-    flex-direction: column;  
-    align-items: flex-start; 
-    gap: 10px;               
-  }
 
     &__catalog {
       display: none;
     }
     &__search {
-      display: flex; 
-      width: 100%;
-    width: 100%;             
-    max-width: 100%;
-    margin-top: 10px;  
-      
+      display: none;
     }
     &__icons {
       display: none;

@@ -1,12 +1,19 @@
-import { useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/grid';
-import { Navigation, Grid } from 'swiper/modules';
-import './style.scss';
-import type { NavigationOptions } from 'swiper/types';
+import { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/grid";
+import { Navigation, Grid } from "swiper/modules";
+import "./style.scss";
+import type { NavigationOptions } from "swiper/types";
 
-const filters = ['Дизайн', 'Портативность', 'Камера', 'Ответ', 'Дисплей', 'Батарея'];
+const filters = [
+  "Дизайн",
+  "Портативность",
+  "Камера",
+  "Ответ",
+  "Дисплей",
+  "Батарея",
+];
 
 const ProductCardList = () => {
   const prevRef = useRef(null);
@@ -14,9 +21,9 @@ const ProductCardList = () => {
 
   return (
     <section className="product-section">
-      <div className="filters"> 
+      <div className="filters">
         {filters.map((filter, idx) => (
-          <div key={idx} className={`filter ${idx < 2 ? 'active' : ''}`}>
+          <div key={idx} className={`filter ${idx < 2 ? "active" : ""}`}>
             {filter}
             {idx < 2 && <span className="close">×</span>}
           </div>
@@ -27,17 +34,17 @@ const ProductCardList = () => {
         <Swiper
           modules={[Navigation, Grid]}
           slidesPerView={2}
-          grid={{ rows: 2, fill: 'row' }}
+          grid={{ rows: 2, fill: "row" }}
           spaceBetween={20}
           breakpoints={{
             0: {
-              slidesPerView: 'auto',
+              slidesPerView: "auto",
               grid: undefined,
               spaceBetween: 12,
             },
-            769: { 
+            769: {
               slidesPerView: 2,
-              grid: { rows: 2, fill: 'row' },
+              grid: { rows: 2, fill: "row" },
               spaceBetween: 20,
             },
           }}
@@ -60,20 +67,28 @@ const ProductCardList = () => {
           className="mySwiper"
         >
           {Array.from({ length: 8 }).map((_, idx) => (
-            <SwiperSlide key={idx} style={{ width: '250px' }}>
+            <SwiperSlide key={idx} style={{ width: "250px" }}>
               <div className="card">
                 <div className="card-header">
                   <span className="category">Портативные колонки</span>
                   <span className="actions">
                     <i className="icon-heart">
-                      <img src="src/assets/icons/ProductCardList/iconc-love.svg" alt="" />
+                      <img
+                        src="src/assets/icons/ProductCardList/iconc-love.svg"
+                        alt=""
+                      />
                     </i>
                     <i className="icon-chart">
-                      <img src="src/assets/icons/ProductCardList/chart-iconc.svg" alt="" />
+                      <img
+                        src="src/assets/icons/ProductCardList/chart-iconc.svg"
+                        alt=""
+                      />
                     </i>
                   </span>
                 </div>
-                <h3 className="product-name">Apple iPhone 13 Pro Max 256 ГБ серый</h3>
+                <h3 className="product-name">
+                  Apple iPhone 13 Pro Max 256 ГБ серый
+                </h3>
 
                 <div className="card-body">
                   <img
@@ -87,7 +102,10 @@ const ProductCardList = () => {
                       <div className="rating-row" key={i}>
                         <span>{name}</span>
                         <div className="rating-bar">
-                          <div className="fill" style={{ width: `${80 - i * 5}%` }} />
+                          <div
+                            className="fill"
+                            style={{ width: `${80 - i * 5}%` }}
+                          />
                         </div>
                       </div>
                     ))}
@@ -98,11 +116,25 @@ const ProductCardList = () => {
           ))}
         </Swiper>
 
-        <button ref={prevRef} className="custom-swiper-button prev" aria-label="Previous">
-          <img src="src/assets/icons/ProductCardList/Arrow - Left 2.svg" alt="Prev" />
+        <button
+          ref={prevRef}
+          className="custom-swiper-button prev"
+          aria-label="Previous"
+        >
+          <img
+            src="src/assets/icons/ProductCardList/Arrow - Left 2.svg"
+            alt="Prev"
+          />
         </button>
-        <button ref={nextRef} className="custom-swiper-button next" aria-label="Next">
-          <img src="src/assets/icons/ProductCardList/Arrow - Right 2.svg" alt="Next" />
+        <button
+          ref={nextRef}
+          className="custom-swiper-button next"
+          aria-label="Next"
+        >
+          <img
+            src="src/assets/icons/ProductCardList/Arrow - Right 2.svg"
+            alt="Next"
+          />
         </button>
       </div>
     </section>
