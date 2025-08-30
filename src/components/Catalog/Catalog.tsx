@@ -1,10 +1,15 @@
-import React from "react";
-import { Menu } from "antd";
-import type { MenuProps } from "antd";
+import React, { useState } from "react";
+import { Menu, Layout } from "antd";
 
-type MenuItem = Required<MenuProps>["items"][number];
+const { Sider, Content } = Layout;
 
-const items: MenuItem[] = [
+type CatalogItem = {
+  key: string;
+  label: React.ReactNode;
+  children?: CatalogItem[];
+};
+
+const items: CatalogItem[] = [
   {
     key: "smartphones",
     label: "Смартфоны",
@@ -69,20 +74,43 @@ const items: MenuItem[] = [
   },
 ];
 
-const onClick: MenuProps["onClick"] = (e) => {
-  console.log("click ", e);
-};
 
 const Catalog: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] =
+    useState<string>("smartphones");
+
+  const category = items.find((i) => i.key === selectedCategory);
+
   return (
     <div className="catalog">
       <h2>Каталог товаров</h2>
-      <Menu
-        onClick={onClick}
-        style={{ width: 300 }}
-        mode="vertical"
-        items={items}
-      />
+      <Layout
+        style={{
+          background: "#fff"
+        }}
+      >
+        <Sider width={200} style={{ background: "#fff" }}>
+          <Menu
+            mode="inline"
+            selectedKeys={[selectedCategory]}
+            onClick={(e) => setSelectedCategory(String(e.key))}
+            items={items.map(({ key, label }) => ({ key, label }))}
+          />
+        </Sider>
+
+        {/* Правое меню — подкатегории */}
+        <Content style={{ padding: "16px" }}>
+          {category?.children && category.children.length > 0 ? (
+            <Menu
+              mode="inline"
+              items={category.children.map(({ key, label }) => ({ key, label }))}
+              style={{ borderRight: 0 }}
+            />
+          ) : (
+            <p>Выберите категорию</p>
+          )}
+        </Content>
+      </Layout>
     </div>
   );
 };
