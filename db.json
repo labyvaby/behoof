@@ -256,6 +256,108 @@
         { "name": "Чехол для смартфона" }
       ]
     }
+  ], 
+  "ProductItem": [
+    {
+      "id": 1,
+      "name": "Apple iPhone 13 Pro Max 256 ГБ серый",
+      "image": "src/assets/images/ProductList/img1.png",
+      "rating": 4.4,
+      "reviews": 447,
+      "price": 78999,
+      "specs": ["Dual Sim, 3G, 4G, 5G, VoLTE, Wi-Fi", "6.1 inches, 1170 x 2532 px Display", "Bionic A15, Hexa Core, 3.22 GHz", "12 MP + 12 MP Dual Rear & 12 MP"],
+      "features": ["4 GB RAM, 128 GB inbuilt", "Memory Card Not Supported", "3240 mAh Battery with Fast", "iOS v15"]
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S22 128 ГБ черный",
+      "image": "src/assets/images/ProductList/img1.png",
+      "rating": 4.6,
+      "reviews": 320,
+      "price": 69999,
+      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.1 inches, 1080 x 2340 px Display", "Exynos 2200, Octa Core, 2.8 GHz", "50 MP + 10 MP + 12 MP Rear"],
+      "features": ["8 GB RAM, 128 GB inbuilt", "Memory Card Not Supported", "3700 mAh Battery with Fast", "Android 12"]
+    },
+    {
+      "id": 3,
+      "name": "Xiaomi 13 Pro 256 ГБ серебристый",
+      "image": "src/assets/images/ProductList/img1.png",
+      "rating": 4.5,
+      "reviews": 215,
+      "price": 59999,
+      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.73 inches, 1440 x 3200 px Display", "Snapdragon 8 Gen 2, Octa Core", "50 MP + 50 MP + 50 MP Rear"],
+      "features": ["12 GB RAM, 256 GB inbuilt", "Memory Card Not Supported", "4820 mAh Battery with Fast", "Android 13"]
+    },
+    {
+      "id": 4,
+      "name": "Google Pixel 7 Pro 128 ГБ белый",
+      "image": "src/assets/images/ProductList/img1.png",
+      "rating": 4.7,
+      "reviews": 180,
+      "price": 64999,
+      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.7 inches, 1440 x 3120 px Display", "Google Tensor G2, Octa Core", "50 MP + 48 MP + 12 MP Rear"],
+      "features": ["12 GB RAM, 128 GB inbuilt", "Memory Card Not Supported", "5000 mAh Battery with Fast", "Android 13"]
+    },
+    {
+      "id": 5,
+      "name": "OnePlus 11 256 ГБ черный",
+      "image": "src/assets/images/ProductList/img1.png",
+      "rating": 4.4,
+      "reviews": 150,
+      "price": 57999,
+      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.7 inches, 1440 x 3216 px Display", "Snapdragon 8 Gen 2, Octa Core", "50 MP + 32 MP + 48 MP Rear"],
+      "features": ["16 GB RAM, 256 GB inbuilt", "Memory Card Not Supported", "5000 mAh Battery with Fast", "Android 13"]
+    },
+    {
+      "id": 6,
+      "name": "Samsung Galaxy Z Flip4 256 ГБ фиолетовый",
+      "image": "src/assets/images/ProductList/img1.png",
+      "rating": 4.3,
+      "reviews": 90,
+      "price": 79999,
+      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.7 inches, 1080 x 2640 px Foldable Display", "Snapdragon 8+ Gen 1, Octa Core", "12 MP + 12 MP Rear"],
+      "features": ["8 GB RAM, 256 GB inbuilt", "Memory Card Not Supported", "3700 mAh Battery with Fast", "Android 12"]
+    },
+    {
+      "id": 7,
+      "name": "Apple iPhone 12 128 ГБ синий",
+      "image": "src/assets/images/ProductList/img1.png",
+      "rating": 4.5,
+      "reviews": 200,
+      "price": 49999,
+      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.1 inches, 1170 x 2532 px Display", "A14 Bionic, Hexa Core", "12 MP + 12 MP Dual Rear"],
+      "features": ["4 GB RAM, 128 GB inbuilt", "Memory Card Not Supported", "2815 mAh Battery", "iOS v14"]
+    },
+    {
+      "id": 8,
+      "name": "Xiaomi Redmi Note 12 128 ГБ зеленый",
+      "image": "src/assets/images/ProductList/img1.png",
+      "rating": 4.2,
+      "reviews": 110,
+      "price": 22999,
+      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.67 inches, 1080 x 2400 px Display", "Snapdragon 4 Gen 1, Octa Core", "48 MP + 8 MP + 2 MP Rear"],
+      "features": ["4 GB RAM, 128 GB inbuilt", "Memory Card Supported", "5000 mAh Battery", "Android 12"]
+    },
+    {
+      "id": 9,
+      "name": "Google Pixel 6a 128 ГБ черный",
+      "image": "src/assets/images/ProductList/img1.png",
+      "rating": 4.3,
+      "reviews": 95,
+      "price": 34999,
+      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.1 inches, 1080 x 2400 px Display", "Google Tensor, Octa Core", "12 MP + 12 MP Rear"],
+      "features": ["6 GB RAM, 128 GB inbuilt", "Memory Card Not Supported", "4410 mAh Battery", "Android 12"]
+    },
+    {
+      "id": 10,
+      "name": "OnePlus Nord 2 128 ГБ синий",
+      "image": "src/assets/images/ProductList/img1.png",
+      "rating": 4.1,
+      "reviews": 85,
+      "price": 29999,
+      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.43 inches, 1080 x 2400 px Display", "MediaTek Dimensity 1200, Octa Core", "50 MP + 8 MP + 2 MP Rear"],
+      "features": ["8 GB RAM, 128 GB inbuilt", "Memory Card Not Supported", "4500 mAh Battery", "Android 12"]
+    }
   ]
    
 }

@@ -1,0 +1,286 @@
+.productList-list {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.productList-card {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+}
+
+.productList-image {
+  width: 240px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-container {
+  display: flex;
+  gap: 5px;
+  margin-left: 50px;
+}
+.logo-content {
+  display: none;
+  gap: 5px;
+}
+
+.productList-details {
+  flex: 2;
+}
+
+.productList-name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.productList-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.productList-rating-value {
+  font-weight: bold;
+  color: #22c55e;
+}
+
+.productList-expert {
+  color: #4ade80;
+  font-weight: 500;
+}
+
+.productList-rating-stars {
+  color: #f59e0b;
+}
+
+.productList-rating-reviews {
+  margin-left: 0.25rem;
+  color: #6b7280;
+}
+
+.productList-main {
+  flex: 1;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.productList-price-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  position: relative;
+  top: -25px;
+}
+
+.productList-discount {
+  color: #22c55e;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.productList-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111;
+  margin-left: 10px;
+}
+
+.productList-specs-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 15px;
+}
+
+.productList-features,
+.productList-specs {
+  list-style: none;
+  padding-left: 0;
+  font-size: 14px;
+  color: #0f1113;
+  flex: 1;
+}
+
+.productList-features li,
+.productList-specs li {
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 22px;
+}
+
+.productList-features li::before,
+.productList-specs li::before {
+  content: "✓";
+  color: #a6b0bd;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.rating-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating-label {
+  width: 100px;
+  font-size: 13px;
+  color: #555;
+  flex-shrink: 0;
+}
+
+.rating-bar {
+  display: flex;
+  flex: 1;
+  gap: 6px;
+}
+
+.segment {
+  flex: 1;
+  height: 6px;
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+.segment.active {
+  background: #ef4444;
+}
+
+.productList-button {
+  background: #ef4444;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.productList-button:hover {
+  background: #dc2626;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+} 
+.pagination {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+
+  .MuiPaginationItem-root {
+    color: #6c757d;
+    font-weight: 500;
+    border-radius: 8px;
+  }
+
+  .Mui-selected {
+    background-color: #ff4d4f !important; 
+    color: #fff !important;
+    border-radius: 8px !important;
+  }
+
+  .MuiPaginationItem-previousNext {
+    color: #ff4d4f !important; 
+    font-weight: 600;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .productList-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .productList-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .productList-details {
+    width: 100%;
+  }
+
+  .productList-main {
+    width: 100%;
+    margin-left: 0;
+    align-items: flex-start;
+  }
+
+  .productList-price-block {
+    margin-right: 42vh;
+    margin-top: 5vh;
+  }
+
+  .rating-list {
+    display: none;
+  }
+
+  .productList-button {
+    display: none;
+  }
+  .productList-specs {
+    display: none;
+  }
+  .productList-image {
+    width: 90px;
+    max-height: 90px;
+    order: 1;
+    margin-top: -9rem;
+  }
+  .productList-features {
+    flex: 1;
+    margin-left: 20vh;
+    margin-top: 2vh;
+  }
+
+  .productList-name {
+    font-size: 15px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .productList-rating-reviews {
+    font-size: 12px;
+  }
+
+  .logo-container {
+    display: none;
+  }
+  .logo-content {
+    display: flex;
+
+    margin-left: 0;
+    order: 100;
+    margin-top: 1rem;
+  }
+}
