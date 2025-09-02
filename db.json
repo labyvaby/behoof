@@ -80,7 +80,7 @@
       "priceChange": 5,
       "image": "src/assets/images/NewProducts/img10.png"
     }
-  ] ,
+  ],
   "reviews": [
     {
       "id": 1,
@@ -106,157 +106,8 @@
       "title": "Обзор устаревших смартфонов",
       "text": "Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra."
     }
-  ],  
-  
-"categories": [
-    {
-      "name": "Смартфоны",
-      "subcategories": [
-        {
-          "name": "Все смартфоны",
-          "products": [
-            { "name": "iPhone 14" },
-            { "name": "Samsung Galaxy S23" },
-            { "name": "Xiaomi 13 Pro" }
-          ]
-        },
-        {
-          "name": "Новинки смартфонов",
-          "badge": "New",
-          "products": [
-            { "name": "iPhone 15" },
-            { "name": "Xiaomi 14" },
-            { "name": "Samsung Galaxy S24" }
-          ]
-        },
-        {
-          "name": "Недорогие смартфоны",
-          "products": [
-            { "name": "Xiaomi Redmi 12" },
-            { "name": "Realme C35" },
-            { "name": "INFINIX Hot 20" }
-          ]
-        },
-        {
-          "name": "Apple",
-          "subcategories": [
-            {
-              "name": "iPhone 14 Series",
-              "products": [
-                { "name": "iPhone 14 Pro Max" },
-                { "name": "iPhone 14 Pro" },
-                { "name": "iPhone 14 Plus" },
-                { "name": "iPhone 14" }
-              ]
-            },
-            {
-              "name": "iPhone 13 Series",
-              "products": [
-                { "name": "iPhone 13 Pro Max" },
-                { "name": "iPhone 13 Pro" },
-                { "name": "iPhone 13" },
-                { "name": "iPhone 13 Mini" }
-              ]
-            },
-            {
-              "name": "iPhone 12 Series",
-              "products": [
-                { "name": "iPhone 12" },
-                { "name": "iPhone 12 Mini" }
-              ]
-            }
-          ]
-        },
-        { "name": "Xiaomi", "products": [{ "name": "Xiaomi 13" }, { "name": "Xiaomi 12" }] },
-        { "name": "Samsung", "products": [{ "name": "Samsung S23" }, { "name": "Samsung S22" }] },
-        { "name": "HONOR", "products": [{ "name": "HONOR Magic 6" }] },
-        { "name": "Realme", "products": [{ "name": "Realme GT 3" }] },
-        { "name": "Tecno", "products": [{ "name": "Tecno Camon 20" }] },
-        { "name": "INFINIX", "products": [{ "name": "INFINIX Zero 6" }] },
-        { "name": "POCO", "products": [{ "name": "POCO X5" }] }
-      ]
-    },
-    {
-      "name": "Ноутбуки",
-      "products": [
-        { "name": "MacBook Air M2" },
-        { "name": "Dell XPS 13" },
-        { "name": "HP Spectre x360" }
-      ]
-    },
-    {
-      "name": "Планшеты",
-      "products": [
-        { "name": "iPad Pro 12.9" },
-        { "name": "Samsung Galaxy Tab S8" }
-      ]
-    },
-    {
-      "name": "Умные часы",
-      "products": [
-        { "name": "Apple Watch Series 9" },
-        { "name": "Samsung Galaxy Watch 6" }
-      ]
-    },
-    {
-      "name": "Игровые приставки",
-      "products": [
-        { "name": "PlayStation 5" },
-        { "name": "Xbox Series X" },
-        { "name": "Nintendo Switch" }
-      ]
-    },
-    {
-      "name": "Наушники",
-      "products": [
-        { "name": "AirPods Pro 2" },
-        { "name": "Sony WH-1000XM5" },
-        { "name": "Bose QuietComfort 45" }
-      ]
-    },
-    {
-      "name": "Портативные колонки",
-      "products": [
-        { "name": "JBL Flip 6" },
-        { "name": "Sony SRS-XB33" }
-      ]
-    },
-    {
-      "name": "Мониторы",
-      "products": [
-        { "name": "Dell Ultrasharp U2723Q" },
-        { "name": "LG UltraGear 27GN950" }
-      ]
-    },
-    {
-      "name": "Принтеры и сканеры",
-      "products": [
-        { "name": "Canon Pixma G7020" },
-        { "name": "HP LaserJet Pro M404dn" }
-      ]
-    },
-    {
-      "name": "Планшеты и электронные книги",
-      "products": [
-        { "name": "Kindle Paperwhite" },
-        { "name": "PocketBook InkPad 4" }
-      ]
-    },
-    {
-      "name": "Корпуса и блоки питания",
-      "products": [
-        { "name": "NZXT H510" },
-        { "name": "Corsair RM850x" }
-      ]
-    },
-    {
-      "name": "Аксессуары",
-      "products": [
-        { "name": "Зарядное устройство" },
-        { "name": "Чехол для смартфона" }
-      ]
-    }
-  ], 
+  ],
+
   "ProductItem": [
     {
       "id": 1,
@@ -265,8 +116,18 @@
       "rating": 4.4,
       "reviews": 447,
       "price": 78999,
-      "specs": ["Dual Sim, 3G, 4G, 5G, VoLTE, Wi-Fi", "6.1 inches, 1170 x 2532 px Display", "Bionic A15, Hexa Core, 3.22 GHz", "12 MP + 12 MP Dual Rear & 12 MP"],
-      "features": ["4 GB RAM, 128 GB inbuilt", "Memory Card Not Supported", "3240 mAh Battery with Fast", "iOS v15"]
+      "specs": [
+        "Dual Sim, 3G, 4G, 5G, VoLTE, Wi-Fi",
+        "6.1 inches, 1170 x 2532 px Display",
+        "Bionic A15, Hexa Core, 3.22 GHz",
+        "12 MP + 12 MP Dual Rear & 12 MP"
+      ],
+      "features": [
+        "4 GB RAM, 128 GB inbuilt",
+        "Memory Card Not Supported",
+        "3240 mAh Battery with Fast",
+        "iOS v15"
+      ]
     },
     {
       "id": 2,
@@ -275,8 +136,18 @@
       "rating": 4.6,
       "reviews": 320,
       "price": 69999,
-      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.1 inches, 1080 x 2340 px Display", "Exynos 2200, Octa Core, 2.8 GHz", "50 MP + 10 MP + 12 MP Rear"],
-      "features": ["8 GB RAM, 128 GB inbuilt", "Memory Card Not Supported", "3700 mAh Battery with Fast", "Android 12"]
+      "specs": [
+        "Dual Sim, 4G, 5G, Wi-Fi",
+        "6.1 inches, 1080 x 2340 px Display",
+        "Exynos 2200, Octa Core, 2.8 GHz",
+        "50 MP + 10 MP + 12 MP Rear"
+      ],
+      "features": [
+        "8 GB RAM, 128 GB inbuilt",
+        "Memory Card Not Supported",
+        "3700 mAh Battery with Fast",
+        "Android 12"
+      ]
     },
     {
       "id": 3,
@@ -285,8 +156,18 @@
       "rating": 4.5,
       "reviews": 215,
       "price": 59999,
-      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.73 inches, 1440 x 3200 px Display", "Snapdragon 8 Gen 2, Octa Core", "50 MP + 50 MP + 50 MP Rear"],
-      "features": ["12 GB RAM, 256 GB inbuilt", "Memory Card Not Supported", "4820 mAh Battery with Fast", "Android 13"]
+      "specs": [
+        "Dual Sim, 4G, 5G, Wi-Fi",
+        "6.73 inches, 1440 x 3200 px Display",
+        "Snapdragon 8 Gen 2, Octa Core",
+        "50 MP + 50 MP + 50 MP Rear"
+      ],
+      "features": [
+        "12 GB RAM, 256 GB inbuilt",
+        "Memory Card Not Supported",
+        "4820 mAh Battery with Fast",
+        "Android 13"
+      ]
     },
     {
       "id": 4,
@@ -295,8 +176,18 @@
       "rating": 4.7,
       "reviews": 180,
       "price": 64999,
-      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.7 inches, 1440 x 3120 px Display", "Google Tensor G2, Octa Core", "50 MP + 48 MP + 12 MP Rear"],
-      "features": ["12 GB RAM, 128 GB inbuilt", "Memory Card Not Supported", "5000 mAh Battery with Fast", "Android 13"]
+      "specs": [
+        "Dual Sim, 4G, 5G, Wi-Fi",
+        "6.7 inches, 1440 x 3120 px Display",
+        "Google Tensor G2, Octa Core",
+        "50 MP + 48 MP + 12 MP Rear"
+      ],
+      "features": [
+        "12 GB RAM, 128 GB inbuilt",
+        "Memory Card Not Supported",
+        "5000 mAh Battery with Fast",
+        "Android 13"
+      ]
     },
     {
       "id": 5,
@@ -305,8 +196,18 @@
       "rating": 4.4,
       "reviews": 150,
       "price": 57999,
-      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.7 inches, 1440 x 3216 px Display", "Snapdragon 8 Gen 2, Octa Core", "50 MP + 32 MP + 48 MP Rear"],
-      "features": ["16 GB RAM, 256 GB inbuilt", "Memory Card Not Supported", "5000 mAh Battery with Fast", "Android 13"]
+      "specs": [
+        "Dual Sim, 4G, 5G, Wi-Fi",
+        "6.7 inches, 1440 x 3216 px Display",
+        "Snapdragon 8 Gen 2, Octa Core",
+        "50 MP + 32 MP + 48 MP Rear"
+      ],
+      "features": [
+        "16 GB RAM, 256 GB inbuilt",
+        "Memory Card Not Supported",
+        "5000 mAh Battery with Fast",
+        "Android 13"
+      ]
     },
     {
       "id": 6,
@@ -315,8 +216,18 @@
       "rating": 4.3,
       "reviews": 90,
       "price": 79999,
-      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.7 inches, 1080 x 2640 px Foldable Display", "Snapdragon 8+ Gen 1, Octa Core", "12 MP + 12 MP Rear"],
-      "features": ["8 GB RAM, 256 GB inbuilt", "Memory Card Not Supported", "3700 mAh Battery with Fast", "Android 12"]
+      "specs": [
+        "Dual Sim, 4G, 5G, Wi-Fi",
+        "6.7 inches, 1080 x 2640 px Foldable Display",
+        "Snapdragon 8+ Gen 1, Octa Core",
+        "12 MP + 12 MP Rear"
+      ],
+      "features": [
+        "8 GB RAM, 256 GB inbuilt",
+        "Memory Card Not Supported",
+        "3700 mAh Battery with Fast",
+        "Android 12"
+      ]
     },
     {
       "id": 7,
@@ -325,8 +236,18 @@
       "rating": 4.5,
       "reviews": 200,
       "price": 49999,
-      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.1 inches, 1170 x 2532 px Display", "A14 Bionic, Hexa Core", "12 MP + 12 MP Dual Rear"],
-      "features": ["4 GB RAM, 128 GB inbuilt", "Memory Card Not Supported", "2815 mAh Battery", "iOS v14"]
+      "specs": [
+        "Dual Sim, 4G, 5G, Wi-Fi",
+        "6.1 inches, 1170 x 2532 px Display",
+        "A14 Bionic, Hexa Core",
+        "12 MP + 12 MP Dual Rear"
+      ],
+      "features": [
+        "4 GB RAM, 128 GB inbuilt",
+        "Memory Card Not Supported",
+        "2815 mAh Battery",
+        "iOS v14"
+      ]
     },
     {
       "id": 8,
@@ -335,8 +256,18 @@
       "rating": 4.2,
       "reviews": 110,
       "price": 22999,
-      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.67 inches, 1080 x 2400 px Display", "Snapdragon 4 Gen 1, Octa Core", "48 MP + 8 MP + 2 MP Rear"],
-      "features": ["4 GB RAM, 128 GB inbuilt", "Memory Card Supported", "5000 mAh Battery", "Android 12"]
+      "specs": [
+        "Dual Sim, 4G, 5G, Wi-Fi",
+        "6.67 inches, 1080 x 2400 px Display",
+        "Snapdragon 4 Gen 1, Octa Core",
+        "48 MP + 8 MP + 2 MP Rear"
+      ],
+      "features": [
+        "4 GB RAM, 128 GB inbuilt",
+        "Memory Card Supported",
+        "5000 mAh Battery",
+        "Android 12"
+      ]
     },
     {
       "id": 9,
@@ -345,8 +276,18 @@
       "rating": 4.3,
       "reviews": 95,
       "price": 34999,
-      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.1 inches, 1080 x 2400 px Display", "Google Tensor, Octa Core", "12 MP + 12 MP Rear"],
-      "features": ["6 GB RAM, 128 GB inbuilt", "Memory Card Not Supported", "4410 mAh Battery", "Android 12"]
+      "specs": [
+        "Dual Sim, 4G, 5G, Wi-Fi",
+        "6.1 inches, 1080 x 2400 px Display",
+        "Google Tensor, Octa Core",
+        "12 MP + 12 MP Rear"
+      ],
+      "features": [
+        "6 GB RAM, 128 GB inbuilt",
+        "Memory Card Not Supported",
+        "4410 mAh Battery",
+        "Android 12"
+      ]
     },
     {
       "id": 10,
@@ -355,9 +296,81 @@
       "rating": 4.1,
       "reviews": 85,
       "price": 29999,
-      "specs": ["Dual Sim, 4G, 5G, Wi-Fi", "6.43 inches, 1080 x 2400 px Display", "MediaTek Dimensity 1200, Octa Core", "50 MP + 8 MP + 2 MP Rear"],
-      "features": ["8 GB RAM, 128 GB inbuilt", "Memory Card Not Supported", "4500 mAh Battery", "Android 12"]
+      "specs": [
+        "Dual Sim, 4G, 5G, Wi-Fi",
+        "6.43 inches, 1080 x 2400 px Display",
+        "MediaTek Dimensity 1200, Octa Core",
+        "50 MP + 8 MP + 2 MP Rear"
+      ],
+      "features": [
+        "8 GB RAM, 128 GB inbuilt",
+        "Memory Card Not Supported",
+        "4500 mAh Battery",
+        "Android 12"
+      ]
     }
+  ],
+  "catalog": [
+    {
+      "key": "smartphones",
+      "label": "Смартфоны",
+      "children": [
+        { "key": "all", "label": "Все смартфоны" },
+        { "key": "new", "label": "New Смартфоны", "highlight": "red" },
+        { "key": "cheap", "label": "Недорогие смартфоны" },
+        { "key": "android", "label": "Смартфоны на Android" },
+        { "key": "premium", "label": "Премиум смартфоны" },
+        { "key": "button", "label": "Кнопочные телефоны" },
+        {
+          "key": "apple",
+          "label": "Apple",
+          "children": [
+            {
+              "key": "iphone14pro",
+              "label": "New iPhone 14 Pro",
+              "highlight": "red"
+            },
+            { "key": "iphone14plus", "label": "iPhone 14 Plus" },
+            { "key": "iphone13", "label": "iPhone 13" },
+            { "key": "iphone12", "label": "iPhone 12" },
+            { "key": "iphoneSE", "label": "iPhone SE" },
+            { "key": "iphone11", "label": "iPhone 11 Pro" },
+            { "key": "iphoneXR", "label": "iPhone XR" },
+            { "key": "iphone8", "label": "iPhone 8" },
+            { "key": "iphone7", "label": "iPhone 7" },
+            { "key": "iphone6", "label": "iPhone 6" },
+            { "key": "iphone5", "label": "iPhone 5" }
+          ]
+        },
+        { "key": "xiaomi", "label": "Xiaomi" },
+        { "key": "honor", "label": "HONOR" },
+        { "key": "realme", "label": "Realme" },
+        { "key": "tecno", "label": "Tecno" },
+        { "key": "infinix", "label": "Infinix" }
+      ]
+    },
+    {
+      "key": "laptops",
+      "label": "Ноутбуки",
+      "children": [
+        { "key": "gaming", "label": "Игровые ноутбуки" },
+        { "key": "office", "label": "Офисные ноутбуки" }
+      ]
+    },
+    {
+      "key": "accessories",
+      "label": "Аксессуары",
+      "children": [
+        { "key": "headphones", "label": "Наушники" },
+        { "key": "watch", "label": "Умные часы" }
+      ]
+    },
+    { "key": "game-consoles", "label": "Игровые приставки" },
+    { "key": "speakers", "label": "Портативные колонки" },
+    { "key": "monitors", "label": "Мониторы" },
+    { "key": "printers", "label": "Принтеры и сканеры" },
+    { "key": "ebooks", "label": "Планшеты и электронные" },
+    { "key": "power-supply", "label": "Корпуса и блоки питания" },
+    { "key": "other-accessories", "label": "Аксессуары" }
   ]
-   
 }

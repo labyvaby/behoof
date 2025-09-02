@@ -1,62 +1,208 @@
 .catalog {
-  position: absolute;
+  position: relative;
   width: 100%;
   background: #fff;
-  display: flex;
-  gap: 30px;
-  padding: 20px;
-  z-index: 100;
+  padding: 15px;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+  }
 
   &__list {
-    flex: 0;
-    min-width: 250px;
     background: #f6f7fa;
     border-radius: 6px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    font-size: 12px;
 
-    .catalog__item {
-      padding: 10px 14px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 6px;
+    .ant-menu {
+      background: transparent;
+      border-inline-end: none;
+    }
+
+    .ant-menu-item {
+      border-radius: 4px;
 
       &:hover {
-        background: #f5f5f5;
-        //color : #fd1515;
+        background: #e9ebf0;
       }
 
-      &.active {
-        color: #e60023;
+      &.ant-menu-item-selected {
+        background: #d0d6e0 !important;
         font-weight: 600;
       }
     }
   }
 
-  &__submenu {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 250px;
-    background: #fff;
-    border: 1px solid #eee;
+  &__lest {
+    flex: 1;
+    max-width: 100%;
+    background: #f6f7fa;
     border-radius: 6px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
 
-    .catalog__item {
-      padding: 10px 14px;
-      cursor: pointer;
+  &__banner {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
 
-      &:hover {
-        background: #f0f0f0;
+  &__empty {
+    padding: 12px;
+    color: #666;
+  }
+
+  .catalog {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+    }
+
+    &__list {
+      background: #f6f7fa;
+      border-radius: 6px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      font-size: 12px;
+
+      .ant-menu {
+        background: transparent;
+        border-inline-end: none;
       }
+
+      .ant-menu-item {
+        border-radius: 4px;
+
+        &:hover {
+          background: #e9ebf0;
+        }
+
+        &.ant-menu-item-selected {
+          background: #d0d6e0 !important;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__lest {
+      flex: 1;
+      max-width: 100%;
+      background: #f6f7fa;
+      border-radius: 6px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    &__banner {
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    }
+
+    &__empty {
+      padding: 12px;
+      color: #666;
+    }
+    .menu-item-with-icon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      padding: 20px;
+
+      &__wrapper {
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      &__list {
+        font-size: 13px;
+      }
+
+      &__lest {
+        max-width: 250px;
+      }
+    }
+    .catalog-block {
+      position: relative;
+      padding: 10px 0;
+
+      .close-icon {
+        position: absolute;
+        right: 10px;
+        top: -30px;
+        font-size: 19px;
+        cursor: pointer;
+        color: #999;
+
+        &:hover {
+          color: #333;
+        }
+      }
+
+      .menu-item-with-icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .ant-menu {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+      }
+
+      .ant-menu-item {
+        border: none;
+        padding: 12px 0;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      padding: 30px;
+
+      &__wrapper {
+        gap: 25px;
+      }
+
+      &__list {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding: 30px;
+
+    &__wrapper {
+      gap: 25px;
+    }
+
+    &__list {
+      font-size: 14px;
     }
   }
 }
