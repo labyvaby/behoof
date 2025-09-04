@@ -112,7 +112,7 @@
     {
       "id": 1,
       "name": "Apple iPhone 13 Pro Max 256 ГБ серый",
-      "image": "src/assets/images/ProductList/img1.png",
+      "image": "https://asiastore.kg/image/cache/catalog/iphone/iphone15/1515%2B/blue/iphone_15_plus_blue_pdp_image_position-1__ww-en-1200x1200.jpg",
       "rating": 4.4,
       "reviews": 447,
       "price": 78999,
@@ -132,7 +132,7 @@
     {
       "id": 2,
       "name": "Samsung Galaxy S22 128 ГБ черный",
-      "image": "src/assets/images/ProductList/img1.png",
+      "image": "https://ishop124.ru/wp-content/uploads/2023/09/iphone-15-green-ishop-2-600x806.jpg",
       "rating": 4.6,
       "reviews": 320,
       "price": 69999,
@@ -152,7 +152,7 @@
     {
       "id": 3,
       "name": "Xiaomi 13 Pro 256 ГБ серебристый",
-      "image": "src/assets/images/ProductList/img1.png",
+      "image": "https://ishop124.ru/wp-content/uploads/2023/09/iphone-15-black-ishop-2-600x806.jpg",
       "rating": 4.5,
       "reviews": 215,
       "price": 59999,
@@ -232,7 +232,7 @@
     {
       "id": 7,
       "name": "Apple iPhone 12 128 ГБ синий",
-      "image": "src/assets/images/ProductList/img1.png",
+      "image": "https://ishop124.ru/wp-content/uploads/2023/09/iphone-15-pink-ishop-2-600x806.jpg",
       "rating": 4.5,
       "reviews": 200,
       "price": 49999,
