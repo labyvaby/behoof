@@ -67,7 +67,7 @@
     }
 
     .product-name {
-      font-size: 13.5px;
+      font-size: 19.5px;
       margin: 8px 0;
       font-weight: 600;
     }
@@ -111,8 +111,8 @@
         }
       }
     }
-  } 
-  
+  }
+
   .swiper-wrapper-container {
     position: relative;
   }
@@ -196,6 +196,13 @@
         }
       }
     }
+    .product-name {
+      font-size: 15px;
+    }
+
+    .custom-swiper-button {
+      display: none !important;
+    }
   }
 
   @media (max-width: 480px) {
@@ -213,20 +220,23 @@
     }
 
     .mySwiper .card-body {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px; 
-      
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 15px;
     }
 
     .mySwiper .product-img {
-      width: 80px;
+      margin-top: 10vh;
+      width: 100px;
       height: auto;
+      flex-shrink: 0;
     }
 
     .mySwiper .rating-list {
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      flex: 1;
 
       .product-name {
         text-align: center;

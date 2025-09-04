@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, ShoppingCart, Heart, BarChart2, User } from "lucide-react";
+import { Home, ShoppingCart, Heart, BarChart2, User } from "lucide-react"; 
 import "./style.scss";
 
 type NavItem = {
@@ -21,13 +21,15 @@ const NavBar: React.FC = () => {
   const [active, setActive] = React.useState("home");
 
   return (
-    <nav className="nav-bar">
-      {items.map((item) => (
+    <nav className="nav-bar"> 
+
+      {items.map((item) => ( 
         <button
           key={item.key}
           className={`nav-bar__item ${active === item.key ? "active" : ""}`}
           onClick={() => setActive(item.key)}
-        >
+        > 
+        
           <div className="nav-bar__icon">
             {item.icon}
             {item.badge && <span className="nav-bar__badge">{item.badge}</span>}
