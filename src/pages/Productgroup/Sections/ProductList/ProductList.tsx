@@ -31,6 +31,7 @@ const ProductList: React.FC = () => {
   const [products, setProducts] = useState<ProductItem[]>([]);
   const [sortBy, setSortBy] = useState<string>('relevance');
   const [page, setPage] = useState(1);
+  const itemsPerPage = 4;
 
   useEffect(() => {
     fetch("http://localhost:3000/ProductItem")
@@ -55,6 +56,10 @@ const ProductList: React.FC = () => {
 
   const sortedProducts = getSortedProducts();
 
+
+  const startIndex = (page - 1) * itemsPerPage;
+  const paginatedProducts = sortedProducts.slice(startIndex, startIndex + itemsPerPage);
+
   const handleChangePage = (_event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };
@@ -65,7 +70,10 @@ const ProductList: React.FC = () => {
         <select
           className="productList-filter-select"
           value={sortBy}
-          onChange={(e) => setSortBy(e.target.value)}
+          onChange={(e) => {
+            setSortBy(e.target.value);
+            setPage(1);
+          }}
         >
           <option value="relevance">По релевантности</option>
           <option value="popularity">По популярности</option>
@@ -74,7 +82,7 @@ const ProductList: React.FC = () => {
         </select>
       </div>
 
-      {sortedProducts.map((item) => (
+      {paginatedProducts.map((item) => (
         <div key={item.id} className="productList-card">
           <img src={item.image} alt={item.name} className="productList-image" />
 
@@ -128,7 +136,7 @@ const ProductList: React.FC = () => {
       <div className='pagination'>
         <Stack spacing={1} alignItems="center">
           <Pagination
-            count={10}
+            count={Math.ceil(sortedProducts.length / itemsPerPage)}
             page={page}
             onChange={handleChangePage}
             renderItem={(item) => {
