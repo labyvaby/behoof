@@ -99,7 +99,12 @@ const ProductList: React.FC = () => {
             </div>
 
             <h3 className="productList-name">{item.name}</h3>
+
             <div className="productList-price-block">
+              <div className='logo' >
+                <img src="src/assets/icons/ProductList/icon2.svg" alt="logo" />
+                <img src="src/assets/icons/ProductList/icons.svg" alt="" />
+              </div>
               <div className="productList-price">{item.price} ₽</div>
             </div>
 
