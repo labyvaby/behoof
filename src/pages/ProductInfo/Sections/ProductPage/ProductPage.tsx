@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import { Chart } from "react-google-charts";
-
-
 import "./style.scss";
-
 const filters = [
   "Дизайн",
   "Портативность",
@@ -14,9 +11,6 @@ const filters = [
   "Дисплей",
   "Батарея",
 ];
-
-
-
 type ShopCardProps = {
   price: number;
   shopName: string;
@@ -26,7 +20,6 @@ type ShopCardProps = {
   trendValue: string;
   link: string;
 };
-
 const chartData = [
   ["x", "Цена"],
   ["1", 1000],
@@ -149,9 +142,6 @@ const ProductPage: React.FC = () => {
       link: "#",
     },
   ];
-
-
-
   return (
     <div className="product-page">
       <nav className="breadcrumbs">
@@ -170,7 +160,6 @@ const ProductPage: React.FC = () => {
               <img src="src/assets/images/BestChoice/Image0.png" alt="iPhone" />
             </div>
           </div>
-
           <div className="product-details">
             <section className="description-info">
               <p>Характеристики Apple iPhone 13 Pro Max 256 ГБ серый</p>
@@ -184,13 +173,11 @@ const ProductPage: React.FC = () => {
                 <li>Экран: OLED</li>
               </ul>
             </section>
-
             <div className="toggle-btn" onClick={() => setIsOpen(!isOpen)}>
               <span>{isOpen ? "Скрыть характеристики" : "Полный список характеристик"}</span>
               <img src="src/assets/icons/ProductPage/Arrow-icons.svg" alt="logo" />
             </div>
           </div>
-
           <div className="description">
             <h2>Описание</h2>
             <p>
@@ -208,11 +195,8 @@ const ProductPage: React.FC = () => {
             </p>
           </div>
         </main>
-
-
         <aside className="product-aside">
           <h1>Apple iPhone 13 Pro Max 256 ГБ серый</h1>
-
           <div className="rating-wrapper">
             <p className="rating">(4.4 Оценка экспертов)</p>
             <Stack spacing={1}>
@@ -220,7 +204,6 @@ const ProductPage: React.FC = () => {
             </Stack>
             <p className="reviews-count">447 отзывов</p>
           </div>
-
           <div className="rating-list">
             {filters.map((name, i) => (
               <div className="rating-row" key={i}>
@@ -231,14 +214,12 @@ const ProductPage: React.FC = () => {
               </div>
             ))}
           </div>
-
           <div className="reviews">
             <p>
               <img src="src/assets/icons/ProductPage/crown-icons.svg" alt="logo" />
               Самый дешевый
             </p>
           </div>
-
           <p className="price">78 999 ₽</p>
           <p className="delivery">Доставка: бесплатно</p>
 
@@ -262,7 +243,6 @@ const ProductPage: React.FC = () => {
               <div className="divider-dot" style={{ left: `${value}%` }} />
             </div>
           </div>
-
           <div className="options">
             <div className="colors">
               <span>Цвет:</span>
@@ -274,7 +254,6 @@ const ProductPage: React.FC = () => {
                 <button className="color-btn gold"></button>
               </div>
             </div>
-
             <div className="memory">
               <p className="memory-title">Память:</p>
               <div className="memory-buttons">
@@ -283,9 +262,7 @@ const ProductPage: React.FC = () => {
                 <button>512 ГБ</button>
               </div>
             </div>
-
           </div>
-
           <div className="actions">
             <button className="compare">
               <img src="src/assets/icons/ProductPage/chart-icons.svg" alt="logo" /> Сравнить
@@ -299,7 +276,6 @@ const ProductPage: React.FC = () => {
             <h2 className="text-lg font-semibold mb-2">История цены</h2>
             <Chart chartType="AreaChart" width="100%" height="300px" data={data} options={options} />
           </div>
-
           <div className="shops-grid">
             {shops.map((shop, i) => (
               <ShopCard key={i} {...shop} />
