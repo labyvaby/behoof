@@ -508,6 +508,32 @@
       "text": "Супер экран! OLED-панель оправдала все ожидания, цвета насыщенные, углы обзора отличные. Немного шумит, но это не критично."
     }
     
+  ], 
+  "ReviewCategories": [
+    { "id": 1, 
+     "title": "Смартфоны", 
+      "img": "src/assets/images/ReviewCategories/Imag1.png" },
+    { "id": 2, 
+     "title": "Ноутбуки",  
+     "img": "src/assets/images/ReviewCategories/Imag2.png" },
+    { "id": 3, 
+     "title": "Планшеты", 
+      "img": "src/assets/images/ReviewCategories/imag3.png" },
+    { "id": 4,  
+    "title": "Умные часы", 
+     "img": "src/assets/images/ReviewCategories/Imag4.png" },
+    { "id": 5,  
+    "title": "Игровые приставки", 
+     "img": "src/assets/images/ReviewCategories/Imag5.png" },
+    { "id": 6,  
+    "title": "Наушники", 
+     "img": "src/assets/images/ReviewCategories/Imag6.png" },
+    { "id": 7, 
+     "title": "Портативные колон",  
+    "img": "src/assets/images/ReviewCategories/Imag7.png" },
+    { "id": 8,  
+    "title": "Аксессуары", 
+     "img": "src/assets/images/ReviewCategories/Imag8.png" }
   ]
 
 }
