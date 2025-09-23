@@ -2,7 +2,8 @@ import { createBrowserRouter } from 'react-router-dom';
 import AppLayout from '../layout/AppLayout';
 import Home from '../pages/Home';
 import  Productgroup  from '../pages/Productgroup';  
-import ProductInfo from '../pages/ProductInfo'; 
+import ProductInfo from '../pages/ProductInfo';  
+import PageReviews from '../pages/PageReviews';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -19,7 +20,11 @@ export const router = createBrowserRouter([
       {
         path: "ProductInfo",   // 👈 сюда мы заходим через /products
         element: <ProductInfo />,
-      },
+      }, 
+      { 
+        path: "PageReviews",   // 👈 сюда мы заходим через /products
+        element: <PageReviews />,
+      }
     ],
   },
 ]);
