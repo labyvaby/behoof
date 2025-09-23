@@ -15,7 +15,8 @@ export default function AppLayout() {
         </div>
       </Content>
       <Footer style={{ textAlign: 'center' }}>© 2025</Footer>  
-      <NavBar/>
+      <NavBar/> 
+      
     </Layout>
   );
 }
