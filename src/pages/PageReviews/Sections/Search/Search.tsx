@@ -14,7 +14,7 @@ const SearchPage: React.FC = () => {
         <div className="search-input-container">
           <input
             type="text"
-            placeholder="Введите поисковый запрос"
+            placeholder="Введите поисковый запрос"  
             className="search-input"
           />
           <img src="src/assets/icons/Search/search-normal.svg" alt="logo" className="search-icon" />
