@@ -584,6 +584,71 @@
       "title": "Обзор устаревших смартфонов",
       "text": "Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra."
     }
+  ], 
+ "comparePage": [
+    {
+      "id": 1,
+      "Descriptions": "Смартфоны",
+      "name": "Apple iPhone 13 Pro Max 256 ГБ серый",
+      "text": "Цена",
+      "price": "114 099 ₽",
+      "img": "src/assets/images/ComparePage/img1.png",
+      "rating": 447,
+      "year": 2021,
+      "cores": 12,
+      "memory": "Apple iPhone 13 Pro Max",
+      "builtinmemory": "128 ГБ",
+      "model": "Apple iPhone 13 Pro",
+      "lte": true
+    },
+    {
+      "id": 2,
+      "Descriptions": "Смартфоны",
+      "name": "Apple iPhone 13 Pro 256 ГБ серый",
+      "text": "Цена",
+      "price": "114 099 ₽",
+      "img": "src/assets/images/ComparePage/img1.png",
+      "rating": 100,
+      "year": 2021,
+      "cores": 8,
+      "memory": "Apple iPhone 13 Pro Max",
+      "builtinmemory": "128 ГБ",
+      "model": "Apple iPhone 13 Pro",
+      "lte": true
+    },
+    {
+      "id": 3,
+      "Descriptions": "Смартфоны",
+      "name": "Apple iPhone 13 256 ГБ серый",
+      "text": "Цена",
+      "price": "114 099 ₽",
+      "img": "src/assets/images/ComparePage/img1.png",
+      "rating": 300,
+      "year": 2021,
+      "cores": 6,
+      "memory": "Apple iPhone 13 Pro Max",
+      "builtinmemory": "128 ГБ",
+      "model": "Apple iPhone 13 Pro",
+      "lte": false
+    },
+    {
+      "id": 4,
+      "Descriptions": "Смартфоны",
+      "name": "Apple iPhone 12 256 ГБ серый",
+      "text": "Цена",
+      "price": "114 099 ₽",
+      "img": "src/assets/images/ComparePage/img1.png",
+      "rating": 112,
+      "year": 2021,
+      "cores": 6,
+      "memory": "Apple iPhone 13 Pro Max",
+      "builtinmemory": "128 ГБ",
+      "model": "Apple iPhone 13 Pro",
+      "lte": true
+    }
   ]
+  
+   
+
 
 }

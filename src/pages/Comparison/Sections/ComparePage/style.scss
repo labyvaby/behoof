@@ -1,0 +1,389 @@
+.compare-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #888;
+} 
+.page-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 16px;
+
+  .page-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .framer {
+    h1 {
+      color: #A1ABB9;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  }
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+} 
+  .trash {
+    width: 40px; 
+    height: 40px;
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+.filter-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.filter-item .count {
+  margin-left: 5px;
+  color: #000;
+}
+
+.filter-item .close {
+  margin-left: 5px;
+  color: #ff4500;
+  cursor: pointer;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-text {
+  font-size: 16px;
+  color: #7e8794;
+  margin-top: 12px;
+}
+.product-rating {
+  display: flex;
+  justify-content: flex-end; 
+}
+.product-rating img {
+  width: 16px; 
+  height: 16px; 
+}
+
+
+.compare-products {
+  //display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+
+.product-card {
+  min-width: 200px;
+  border: 9px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+} 
+.add-product {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-top: 60%;
+  
+  height: 87%;
+}
+
+.add-btn {
+  
+  border: 5px solid #F2F5F9;
+  color: #FF4D4D; 
+  background: #F2F5F9;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.product-card img {
+  //width: 100%;
+  //border-radius: 100px;
+}
+
+.product-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.product-description {
+  font-size: 14px;
+  color: #7e8794;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-weight: bold;
+  font-size: 20px;
+  color: #263141;
+  margin-top: 12px;
+}
+
+.compare-table {
+  width: 100%;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: Arial, sans-serif;
+  background: #fff; 
+  z-index: 1000; 
+  max-height: 100vh; 
+  overflow-y: auto;
+}
+
+.row-coll {
+  background: #f9f9f9;
+  font-size: 24px;
+  font-weight: bold;
+  //padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* строки */
+.row {
+  display: flex;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.row:nth-child(even) {
+  background: #fafafa;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+/* ячейки */
+.cell {
+  flex: 1;
+  padding: 13px;
+  border-right: 1px solid #f0f0f0;
+  font-size: 14px;
+  text-align: center;
+}
+.highlight {
+  font-size: 20px;
+}
+
+.cell {
+  flex: 2;
+  padding: 20px;
+  border-right: 1px solid #f0f0f0;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column; 
+}
+
+.memory-row {
+  display: flex;
+  gap: 110px;
+  margin-top: 10px;
+}
+
+.memory-cell {
+  padding: 2px 1px;
+  color: #7e8794;
+  font-size: 14px;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+.row .cell:first-child {
+  font-weight: bold;
+  text-align: left;
+  min-width: 220px;
+}
+
+/* стили для выделений */
+.success {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.error {
+  color: #dc2626; 
+}
+
+/* Год релиза */
+.cell {
+  flex: 2;
+  padding: 20px;
+  border-right: 1px solid #f0f0f0;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+}
+
+.year-row {
+  display: flex;
+  gap: 25%; 
+  margin-top: 10px;
+  font-size: 16px;
+  color: #7e8794;
+}
+
+.year-cell {
+  padding: 1px 1px;
+}
+
+/* Количество ядер*/
+.cell {
+  flex: 2;
+  padding: 20px;
+  border-right: 1px solid #f0f0f0;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+}
+
+.cores-row {
+  display: flex;
+  gap: 28%;
+  margin-top: 10px;
+}
+
+.cores-cell {
+  padding: 3px 1px;
+  color: #7e8794;
+  font-size: 16px;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+/* Поддержка 4G (LTE)*/
+.lte-row {
+  display: flex;
+  gap: 28%;
+  margin-top: 10px;
+}
+
+.lte-cell {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+/* Объем встроенной памяти */
+.storage-row {
+  display: flex;
+  gap: 23%; 
+  margin-top: 10px;
+}
+
+.storage-cell {
+  padding: 5px 1px;
+  color: #7e8794;
+  font-size: 16px;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+/* Модели */
+.model-row {
+  display: flex;
+  gap: 14%; 
+  margin-top: 10px;
+}
+
+.model-cell {
+  padding: 3px 1px;
+  font-size: 14px;
+  color: #7e8794;
+}
+
+/* Год релиза */
+.year-row {
+  display: flex;
+  gap: 25%; 
+  margin-top: 10px;
+}
+
+.year-cell {
+  padding: 5px 1px;
+}
+
+/* Объем встроенной памяти*/
+
+@media (max-width: 768px) {
+  .compare-table {
+    font-size: 12px;
+  }
+
+  /* значения продуктов выстраиваются горизонтально */
+  .memory-row,
+  .year-row,
+  .cores-row,
+  .lte-row,
+  .storage-row,
+  .model-row {
+    flex-direction: row; 
+    justify-content: flex-start;
+    gap: 20px; 
+  }
+
+  .cell {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cell {
+    font-size: 11px;
+    padding: 19px;
+  }
+
+  .row .cell:first-child {
+    min-width: 120px;
+  }
+
+  .memory-row,
+  .year-row,
+  .cores-row,
+  .lte-row,
+  .storage-row,
+  .model-row {
+    // flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px; 
+  }
+}
