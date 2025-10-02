@@ -5,7 +5,8 @@ import  Productgroup  from '../pages/Productgroup';
 import ProductInfo from '../pages/ProductInfo';  
 import PageReviews from '../pages/PageReviews'; 
 import NotFound from '../pages/NotFound'; 
-import Comparison from '../pages/Comparison/Sections/Comparison/Comparison';
+import Comparison from '../pages/Comparison/Sections/Comparison/Comparison'; 
+import Categories from '../pages/Categories/Sections/Categories/Categories';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
       { 
         path: "Comparison",   // 👈 сюда мы заходим через /products
         element: <Comparison />,
+      }, 
+        { 
+        path: "Categories",   // 👈 сюда мы заходим через /products
+        element: <Categories />,
       }
     ],
   },
