@@ -372,7 +372,7 @@
     { "key": "ebooks", "label": "Планшеты и электронные" },
     { "key": "power-supply", "label": "Корпуса и блоки питания" },
     { "key": "other-accessories", "label": "Аксессуары" }
-  ], 
+  ],
   "Testimonials": [
     {
       "id": 1,
