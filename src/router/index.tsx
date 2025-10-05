@@ -6,7 +6,8 @@ import ProductInfo from '../pages/ProductInfo';
 import PageReviews from '../pages/PageReviews'; 
 import NotFound from '../pages/NotFound'; 
 import Comparison from '../pages/Comparison/Sections/Comparison/Comparison'; 
-import Categories from '../pages/Categories/Sections/Categories/Categories';
+import Categories from '../pages/Categories/Sections/Categories/Categories';  
+import PrivacyPolicy from '../pages/PrivacyPolicy';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -39,7 +40,12 @@ export const router = createBrowserRouter([
         { 
         path: "Categories",   // 👈 сюда мы заходим через /products
         element: <Categories />,
+      },  
+      { 
+        path: "PrivacyPolicy",   // 👈 сюда мы заходим через /products
+        element: <PrivacyPolicy/>,
       }
+      
     ],
   },
 ]);

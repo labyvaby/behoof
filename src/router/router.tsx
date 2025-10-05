@@ -6,7 +6,8 @@ import Home from "../pages/Home";
  import PageReviews from "../pages/PageReviews"; 
  import NotFound from "../pages/NotFound"; 
  import Comparison from "../pages/Comparison/Sections/ComparePage/ComparePage"; 
- import Categories from "../pages/Categories/Sections/Categories/Categories";
+ import Categories from "../pages/Categories/Sections/Categories/Categories";  
+ import PrivacyPolicy from "../pages/PrivacyPolicy";
  const routerConfig = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,10 @@ import Home from "../pages/Home";
       { 
         path: "Categories",   // 👈 сюда мы заходим через /products
         element: <Categories />,
+      }, 
+     { 
+        path: "PrivacyPolicy",   // 👈 сюда мы заходим через /products
+        element: <PrivacyPolicy/>,
       }
 
     ],
