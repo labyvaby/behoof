@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
@@ -39,6 +40,7 @@ const ProductList: React.FC = () => {
       .then(data => setProducts(data));
   }, []);
 
+  const navigate = useNavigate();
 
   const getSortedProducts = () => {
     const sorted = [...products];
@@ -99,7 +101,12 @@ const ProductList: React.FC = () => {
             </div>
 
             <h3 className="productList-name">{item.name}</h3>
+
             <div className="productList-price-block">
+              <div className='logo' >
+                <img src="src/assets/icons/ProductList/icon2.svg" alt="logo" />
+                <img src="src/assets/icons/ProductList/icons.svg" alt="" />
+              </div>
               <div className="productList-price">{item.price} ₽</div>
             </div>
 
@@ -128,7 +135,12 @@ const ProductList: React.FC = () => {
               ))}
             </div>
 
-            <button className="productList-button">Перейти к товару</button>
+            <button
+              className="productList-button"
+              onClick={() => navigate(`/product/${item.id}`)}
+            >
+              Перейти к товару
+            </button>
           </div>
         </div>
       ))}

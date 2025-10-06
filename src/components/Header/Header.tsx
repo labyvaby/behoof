@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Container from "../Сontainer/Container";
 import "./style.scss";
 import logo from "../../assets/logo.svg";
@@ -13,9 +14,11 @@ const Header: React.FC = () => {
       <Container>
         <div className="header__content">
           <div className="header__logo">
-            <img src={logo} alt="Behoof" className="header__logo-icon" />
+            <Link to="/">
+              <img src={logo} alt="Behoof" className="header__logo-icon" />
+            </Link>
             <div className="header__logo-text">
-              <span className="header__title">Behoof</span>
+             <Link to="/" className="header__title">Behoof</Link>
               <span className="header__subtitle">
                 Лучшие цены <br /> в интернет-магазинах
               </span>

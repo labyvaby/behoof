@@ -1,0 +1,157 @@
+$bg: #f6f8fb;
+$card-bg: #f1f5f9;
+$text: #24303b;
+$muted: #7d8a95;
+$accent: #e86c6c;
+$radius: 12px;
+$shadow: 0 6px 18px rgba(40, 52, 70, 0.06);
+
+.categories-page {
+  padding: 28px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Inter, Roboto, -apple-system, "Segoe UI", sans-serif;
+  color: $text;
+  background: white;
+}
+
+.breadcrumbs {
+  color: $muted;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.page-title {
+  font-size: 34px;
+  margin: 6px 0 22px 0;
+}
+
+.category-section {
+  margin-bottom: 36px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 28px;
+}
+
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(241, 245, 249, 1) 0%,
+    rgba(247, 249, 251, 1) 100%
+  );
+  border-radius: $radius;
+  padding: 18px 20px;
+  box-shadow: $shadow;
+  min-height: 150px;
+}
+
+.card-title {
+  font-size: 15px;
+  margin: 0 0 12px 0;
+  color: $text;
+}
+
+.card-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+}
+
+.col-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 8px;
+
+    a {
+      text-decoration: none;
+      color: $muted;
+      font-size: 13px;
+    }
+
+    &.tag-new a {
+      position: relative;
+    }
+
+    &.tag-new a::after {
+      content: "Новое";
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 6px;
+      border-radius: 10px;
+      background: #e6f6ec;
+      color: #1b9b5a;
+      font-size: 11px;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .card-columns {
+    grid-template-columns: 1fr 1fr; 
+    gap: 8px 20px;
+  }
+
+  .card-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .col-list li a {
+    font-size: 13px;
+  }
+
+  .section-header {
+    gap: 8px;
+    margin-bottom: 12px;
+
+    .section-title {
+      font-size: 18px;
+    }
+  }
+}
