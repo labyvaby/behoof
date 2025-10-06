@@ -63,9 +63,10 @@
   }
 
   .toggle-btn {
-    margin-top: 15px;
+    margin-bottom: 45px;
     span {
       color: #ff4d4d;
+      font-size: 16px;
       font-weight: 500;
       cursor: pointer;
       transition: 0.3s;
@@ -228,12 +229,13 @@
         margin-bottom: 20px;
 
         .color-btn {
-          width: 25px;
-          height: 25px;
+          width: 32px;
+          height: 32px;
           border-radius: 20%;
           border: 1px solid #ccc;
           margin-left: 5px;
           cursor: pointer;
+          transition: all 0.2s ease;
 
           &.gray {
             background: gray;
@@ -243,6 +245,11 @@
           }
           &.gold {
             background: gold;
+          }
+
+          &:hover {
+            transform: scale(1.15);
+            border-color: #9d0000; // делает рамку темнее
           }
         }
       }
@@ -458,21 +465,21 @@
 
     .colors {
       display: flex;
-      flex-direction: column; // надпись сверху
+      flex-direction: column;
       margin-bottom: 15px;
 
       span {
         font-size: 19px;
         font-weight: 600;
         padding-left: 5px;
-        margin-bottom: 10px; // отступ от текста до кнопок
+        margin-bottom: 10px;
       }
 
       .color-list {
-        display: flex; // кнопки в ряд
-        flex-wrap: wrap; // если кнопок много, они переносятся
+        display: flex;
+        flex-wrap: wrap;
 
-        gap: 16px; // промежутки между ними
+        gap: 16px;
       }
 
       .color-btn {
@@ -508,9 +515,6 @@
         font-size: 16px;
         font-weight: 600;
         margin-bottom: 5px;
-      }
-
-      .memory-buttons {
       }
 
       button {
