@@ -7,7 +7,8 @@ import Home from "../pages/Home";
  import NotFound from "../pages/NotFound"; 
  import Comparison from "../pages/Comparison/Sections/ComparePage/ComparePage"; 
  import Categories from "../pages/Categories/Sections/Categories/Categories";  
- import PrivacyPolicy from "../pages/PrivacyPolicy";
+ import PrivacyPolicy from "../pages/PrivacyPolicy"; 
+ import Login from "../pages/Login/Sections/Login/Login";
  const routerConfig = createBrowserRouter([
   {
     path: "/",
@@ -45,7 +46,13 @@ import Home from "../pages/Home";
      { 
         path: "PrivacyPolicy",   // 👈 сюда мы заходим через /products
         element: <PrivacyPolicy/>,
-      }
+      }, 
+       { 
+              path: "Login",   // 👈 сюда мы заходим через /products
+              element: <Login onLogin={function (_email: string): void {
+                throw new Error("Function not implemented.");
+              } } />,
+            }
 
     ],
   },

@@ -967,5 +967,25 @@
     { "id": 4, "name": "Ответ" },
     { "id": 5, "name": "Дисплей" },
     { "id": 6, "name": "Батарея" }
+  ], 
+     "Login": [
+    {
+      "id": 1,
+      "email": "vladimir1998@mail.ru",
+      "password": "12345678",
+      "name": "Владимир Иванов"
+    },
+    {
+      "id": 2,
+      "email": "baiel2002@gmail.com",
+      "password": "qwerty123",
+      "name": "Байэл Урустанбеков"
+    },
+    {
+      "id": 3,
+      "email": "test@example.com",
+      "password": "password",
+      "name": "Test User"
+    }
   ]
 }

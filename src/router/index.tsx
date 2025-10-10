@@ -7,7 +7,8 @@ import PageReviews from '../pages/PageReviews';
 import NotFound from '../pages/NotFound'; 
 import Comparison from '../pages/Comparison/Sections/Comparison/Comparison'; 
 import Categories from '../pages/Categories/Sections/Categories/Categories';  
-import PrivacyPolicy from '../pages/PrivacyPolicy';
+import PrivacyPolicy from '../pages/PrivacyPolicy'; 
+import Login from '../pages/Login/Sections/Login/Login';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -44,6 +45,12 @@ export const router = createBrowserRouter([
       { 
         path: "PrivacyPolicy",   // 👈 сюда мы заходим через /products
         element: <PrivacyPolicy/>,
+      }, 
+      { 
+        path: "Login",   // 👈 сюда мы заходим через /products
+        element: <Login onLogin={function (_email: string, _password: string): void {
+          throw new Error('Function not implemented.');
+        } } />,
       }
       
     ],

@@ -1,0 +1,154 @@
+.login-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 60vh;
+  font-family: Arial, sans-serif;
+}
+
+.right-panel {
+  flex: 1;
+  background-color: #f0f2f5;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-panel h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2b2b2b;
+}
+
+.right-panel form {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-panel input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.tost {
+  font-size: 14px;
+  color: #4f6786;
+  margin-bottom: 8px;
+}
+
+.login-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.login-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.login-btn:hover {
+  background-color: #ff1f1f;
+}
+
+.forgot-password {
+  font-size: 14px;
+  color: #4f6786;
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .login-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .login-btn {
+    width: 100%;
+  }
+
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.left-panel {
+  flex: 1;
+  background-color: #ff4d4d;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.left-panel h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.left-panel p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.register-btn {
+  background-color: white;
+  color: #ff4d4d;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #ffe5e5;
+}
+
+/* 📱 Адаптивность */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column-reverse;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .left-panel {
+    text-align: center;
+  }
+
+  .register-btn {
+    width: 100%;
+  }
+
+  .login-btn {
+    width: 100%;
+  }
+}
