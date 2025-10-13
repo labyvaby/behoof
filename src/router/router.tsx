@@ -9,7 +9,8 @@ import Comparison from "../pages/Comparison/Sections/ComparePage/ComparePage";
 import Categories from "../pages/Categories/Sections/Categories/Categories";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Login from "../pages/Login/Sections/Login/Login"; 
-import Profile from "../pages/Profile/Sections/Profile/Profile";
+import Profile from "../pages/Profile/Sections/Profile/Profile"; 
+import ArticlePage  from "../pages/ArticlePage/Sections/ArticlePage/ArticlePage";
 const routerConfig = createBrowserRouter([
   {
     path: "/",
@@ -57,7 +58,11 @@ const routerConfig = createBrowserRouter([
       {
         path: "Profile",   // 👈 сюда мы заходим через /products
         element: <Profile />,
-      }
+      }, 
+         {
+        path: "ArticlePage",   // 👈 сюда мы заходим через /products
+        element: <ArticlePage/>,
+      }, 
 
     ],
   },

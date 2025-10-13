@@ -1009,5 +1009,35 @@
       "country": "Беларусь",
       "cities": ["Минск", "Гродно", "Брест", "Витебск"]
     }
+  ], 
+   "smartphones": [
+    {
+      "id": 1,
+      "name": "Infinix HOT 12 Pro",
+      "image": "/src/assets/images/ArticlePage/AppleImg.png",
+      "rating": 4.8,
+      "icon": "src/assets/icons/rank/iconsRank.svg"
+    },
+    {
+      "id": 2,
+      "name": "POCO C40",
+      "image": "/src/assets/images/ArticlePage/AppleImg.png",
+      "rating": 4.7,
+      "icon": "src/assets/icons/rank/iconsRank.svg"
+    },
+    {
+      "id": 3,
+      "name": "Tecno Spark 10",
+      "image": "/src/assets/images/ArticlePage/AppleImg.png",
+      "rating": 4.6,
+      "icon": "src/assets/icons/rank/iconsRank.svg"
+    },
+    {
+      "id": 4,
+      "name": "Realme C30",
+      "image": "/src/assets/images/ArticlePage/AppleImg.png",
+      "rating": 4.5,
+      "icon": "src/assets/icons/rank/iconsRank.svg"
+    }
   ]
 }
