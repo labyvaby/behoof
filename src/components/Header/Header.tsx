@@ -18,13 +18,14 @@ const Header: React.FC = () => {
               <img src={logo} alt="Behoof" className="header__logo-icon" />
             </Link>
             <div className="header__logo-text">
-             <Link to="/" className="header__title">Behoof</Link>
+              <Link to="/" className="header__title">Behoof</Link>
               <span className="header__subtitle">
                 Лучшие цены <br /> в интернет-магазинах
               </span>
             </div>
           </div>
           <div className="header__middle">
+
             <button
               className="header__catalog"
               onClick={() => setIsCatalogOpen(!isCatalogOpen)}

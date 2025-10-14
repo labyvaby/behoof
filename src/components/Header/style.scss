@@ -6,7 +6,7 @@
     margin: 0 auto;
     padding: 8px 20px;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: space-between;
     gap: 20px;
   }
@@ -14,7 +14,9 @@
   &__logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 8px; 
+     
+    
 
     &-icon {
       width: 32px;
@@ -23,11 +25,13 @@
 
     .header__logo-text {
       display: flex;
-      flex-direction: row; 
-      align-items: center; 
-      gap: 10px; 
-    }
-  }
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    } 
+    
+  } 
+  
 
   .header__title {
     font-weight: bold;
@@ -38,14 +42,14 @@
   .header__subtitle {
     font-size: 14px;
     color: #263141;
-    white-space: nowrap; 
+    white-space: nowrap;
   }
 
   &__middle {
     display: flex;
     align-items: center;
     gap: 0px;
-    flex: 1; 
+    flex: 1;
   }
   &__search {
     display: flex;
@@ -70,7 +74,7 @@
       background: #f2f5f9;
     }
   }
-  .catalog{
+  .catalog {
     position: absolute;
     width: 100%;
     background: #fff;
@@ -185,4 +189,9 @@
       display: none;
     }
   }
+  &__back-icon {
+    display: block; // показываем только на адаптиве
+  }
+
+
 }
