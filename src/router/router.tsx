@@ -10,7 +10,7 @@ import Categories from "../pages/Categories/Sections/Categories/Categories";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Login from "../pages/Login/Sections/Login/Login"; 
 import Profile from "../pages/Profile/Sections/Profile/Profile"; 
-import ArticlePage  from "../pages/ArticlePage/Sections/ArticlePage/ArticlePage";
+import ArticlePage  from "../pages/ArticlePage";
 const routerConfig = createBrowserRouter([
   {
     path: "/",
@@ -24,7 +24,7 @@ const routerConfig = createBrowserRouter([
         path: "Productgroup", // 👈 сюда мы заходим через /products
         element: <Productgroup />,
       },
-
+     
       {
         path: "ProductInfo",   // 👈 сюда мы заходим через /products
         element: <ProductInfo />,

@@ -82,7 +82,7 @@ const ArticlePage: React.FC = () => {
             ))}
           </ul>
         </aside>
-      </div>
+      </div> 
     </div>
   );
 };
