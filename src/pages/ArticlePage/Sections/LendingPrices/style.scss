@@ -1,0 +1,115 @@
+.lending-prices-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 20px;
+  width: 100%;
+}
+
+.shop-card-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f8fa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 65%;
+  margin-left: 0;
+  transition: all 0.3s ease;
+}
+
+.shop-card-horizontal:hover {
+  transform: translateY(-3px);
+}
+
+.shop-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.shop-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.shop-logos {
+  display: flex;
+  gap: 10px;
+}
+
+.shop-logos img {
+  width: 36px;
+  height: 36px;
+}
+
+.shops-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: start;
+  align-items: start;
+  width: 65%;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.chart-wrapper {
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .shop-card-horizontal,
+  .shops-grid {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .shops-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .chart-wrapper {
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-card-horizontal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .shops-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-name {
+    font-size: 18px;
+  }
+
+  .shop-logos img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .chart-wrapper {
+    height: 90px;
+  }
+}
