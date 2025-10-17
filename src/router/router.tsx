@@ -10,7 +10,8 @@ import Categories from "../pages/Categories/Sections/Categories/Categories";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Login from "../pages/Login/Sections/Login/Login"; 
 import Profile from "../pages/Profile/Sections/Profile/Profile"; 
-import ArticlePage  from "../pages/ArticlePage";
+import ArticlePage  from "../pages/ArticlePage"; 
+import Articles from '../pages/Articles/Sections/BlogPage/BlogPage'
 const routerConfig = createBrowserRouter([
   {
     path: "/",
@@ -62,7 +63,11 @@ const routerConfig = createBrowserRouter([
          {
         path: "ArticlePage",   // 👈 сюда мы заходим через /products
         element: <ArticlePage/>,
-      }, 
+      },  
+      {
+        path: "Articles",   // 👈 сюда мы заходим через /products
+        element: <Articles />,
+      },
 
     ],
   },

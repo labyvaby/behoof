@@ -8,9 +8,10 @@ import NotFound from '../pages/NotFound';
 import Comparison from '../pages/Comparison/Sections/Comparison/Comparison';
 import Categories from '../pages/Categories/Sections/Categories/Categories';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
-import Login from '../pages/Login/Sections/Login/Login'; 
-import Profile from '../pages/Profile/Sections/Profile/Profile'; 
-import ArticlePage  from '../pages/ArticlePage/Sections/ArticlePage/ArticlePage';
+import Login from '../pages/Login/Sections/Login/Login';
+import Profile from '../pages/Profile/Sections/Profile/Profile';
+import ArticlePage from '../pages/ArticlePage/Sections/ArticlePage/ArticlePage';
+import Articles from '../pages/Articles/Sections/BlogPage/BlogPage'
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -57,12 +58,15 @@ export const router = createBrowserRouter([
       {
         path: "Profile",   // 👈 сюда мы заходим через /products
         element: <Profile />,
-      }, 
-        {
+      },
+      {
         path: "ArticlePage",   // 👈 сюда мы заходим через /products
-        element: <ArticlePage/>,
-      }, 
-
+        element: <ArticlePage />,
+      },
+      {
+        path: "Articles",   // 👈 сюда мы заходим через /products
+        element: <Articles />,
+      },
 
 
     ],
