@@ -1,5 +1,5 @@
-import React from "react"; 
-import { Link } from "react-router-dom";  
+import React from "react";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 const BlogPage: React.FC = () => {
@@ -66,18 +66,18 @@ const BlogPage: React.FC = () => {
   ];
 
   return (
-    <div className="blog"> 
-   <div className="breadcrumb">
-  <Link to="/" className="breadcrumb__home">Главная</Link>
-  <span className="breadcrumb__divider"> / </span>
-  <span className="breadcrumb__current">Блог</span>
-</div>
+    <div className="blog">
+      <div className="breadcrumb">
+        <Link to="/" className="breadcrumb__home">Главная</Link>
+        <span className="breadcrumb__divider"> / </span>
+        <span className="breadcrumb__current">Блог</span>
+      </div>
       <div className="blog__header">
         <h1>Блог</h1>
         <div className="blog__search-tags">
           <div className="search-block">
             <h3>
-              Поиск <span>статей</span>
+              Поиск <span>статй</span>
             </h3>
             <div className="input-wrapper">
               <span className="input-icon"><img src="src/assets/icons/BlogPage/Search.svg" alt="logo Search" /></span>
