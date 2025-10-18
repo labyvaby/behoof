@@ -11,7 +11,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Login from "../pages/Login/Sections/Login/Login"; 
 import Profile from "../pages/Profile/Sections/Profile/Profile"; 
 import ArticlePage  from "../pages/ArticlePage"; 
-import Articles from '../pages/Articles/Sections/BlogPage/BlogPage'
+import Articles from '../pages/Articles'
 const routerConfig = createBrowserRouter([
   {
     path: "/",

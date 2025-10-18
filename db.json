@@ -1073,6 +1073,64 @@
         "rank": "src/assets/icons/SmartphonePage/counter.svg"
       }
     }
+  ], 
+   "BlogApple": [
+   {
+      "id": 1,
+      "image": "src/assets/images/blogApple/img1.png",
+      "title": "Xiaomi опубликовала постер Redmi Turbo 3 — он выглядит не так, как ожидалось",
+      "date": "15 апреля 2024 г.",
+      "tags": ["Xiaomi", "Смартфоны", "Технологии"]
+    },
+    {
+      "id": 2,
+      "image": "src/assets/images/blogApple/img2.png",
+      "title": "Whoosh представил функцию старта аренды электросамокатов без приложения",
+      "date": "15 апреля 2024 г.",
+      "tags": ["Whoosh", "Самокаты", "Технологии"]
+    },
+    {
+      "id": 3,
+      "image": "src/assets/images/blogApple/imgMini1.png",
+      "title": "Компания NAVEE представила в России электросамокаты в дизайне киберпанка",
+      "date": "16 апреля 2024 г.",
+      "tags": ["NAVEE", "Электросамокаты", "Технологии"]
+    },
+    {
+      "id": 4,
+      "image": "src/assets/images/blogApple/imgMini2.png",
+      "title": "Samsung представила флагман Galaxy Z Fold 6",
+      "date": "17 апреля 2024 г.",
+      "tags": ["Samsung", "Смартфоны", "Гаджеты"]
+    },
+    {
+      "id": 5,
+      "image": "src/assets/images/blogApple/imgMini3.png",
+      "title": "Apple готовит iPhone 16 с новой камерой",
+      "date": "18 апреля 2024 г.",
+      "tags": ["Apple", "Смартфоны", "Технологии"]
+    },
+    {
+      "id": 6,
+      "image": "src/assets/images/blogApple/imgMini4.png",
+      "title": "Huawei возвращается с мощным планшетом",
+      "date": "19 апреля 2024 г.",
+      "tags": ["Huawei", "Планшеты", "Технологии"]
+    },
+    {
+      "id": 7,
+      "image": "src/assets/images/blogApple/img1.png",
+      "title": "Tesla представила новый электромобиль",
+      "date": "20 апреля 2024 г.",
+      "tags": ["Tesla", "Авто", "Энергия"]
+    },
+    {
+      "id": 8,
+      "image": "src/assets/images/blogApple/img1.png",
+      "title": "Sony выпустила новую консоль PlayStation 6",
+      "date": "21 апреля 2024 г.",
+      "tags": ["Sony", "Игры", "Консоли"]
+    }
   ]
   
   
