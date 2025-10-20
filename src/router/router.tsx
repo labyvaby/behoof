@@ -11,7 +11,9 @@ import PrivacyPolicy from "../pages/PrivacyPolicy";
 import Login from "../pages/Login/Sections/Login/Login"; 
 import Profile from "../pages/Profile/Sections/Profile/Profile"; 
 import ArticlePage  from "../pages/ArticlePage"; 
-import Articles from '../pages/Articles'
+import Articles from '../pages/Articles'  
+import SelectedPage from '../pages/SelectedPage/Sections/PostPage/PostPage';
+
 const routerConfig = createBrowserRouter([
   {
     path: "/",
@@ -68,7 +70,10 @@ const routerConfig = createBrowserRouter([
         path: "Articles",   // 👈 сюда мы заходим через /products
         element: <Articles />,
       },
-
+ { 
+        path: "SelectedPage",   // 👈 сюда мы заходим через /products
+        element: <SelectedPage />,
+      }
     ],
   },
 ]);
