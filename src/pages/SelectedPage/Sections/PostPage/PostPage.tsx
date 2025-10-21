@@ -37,7 +37,8 @@ const PostPage: React.FC = () => {
         </p>
       </div> 
       <div className='xiomi' > 
-         <img src="src/assets/images/PostPage/img1.png" alt="img" />
+         <img src="src/assets/images/PostPage/img1.png" alt="img" /> 
+        
       </div>
     </div>
   );
