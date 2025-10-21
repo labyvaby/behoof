@@ -12,7 +12,7 @@ import Login from "../pages/Login/Sections/Login/Login";
 import Profile from "../pages/Profile/Sections/Profile/Profile"; 
 import ArticlePage  from "../pages/ArticlePage"; 
 import Articles from '../pages/Articles'  
-import SelectedPage from '../pages/SelectedPage/Sections/PostPage/PostPage';
+import SelectegPage from '../pages/SelectegPage';
 
 const routerConfig = createBrowserRouter([
   {
@@ -72,7 +72,7 @@ const routerConfig = createBrowserRouter([
       },
  { 
         path: "SelectedPage",   // 👈 сюда мы заходим через /products
-        element: <SelectedPage />,
+        element: <SelectegPage />,
       }
     ],
   },
