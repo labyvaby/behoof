@@ -1,0 +1,48 @@
+$primary-color: #263141;
+$gray-color: #4b5563;
+$text-color: #0F1113;
+
+.processor-spec {
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+  color: $text-color;
+
+  .spec-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 1rem;
+
+  }
+
+  .spec-content {
+    line-height: 1.6;
+
+    .spec-item {
+      font-size: 16px;
+      color: $gray-color;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-left: 4px solid $primary-color;
+     
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .processor-spec {
+    padding: 0.5rem;
+
+    .spec-title {
+      font-size: 1.25rem;
+    }
+
+    .spec-content {
+      .spec-item {
+        font-size: 0.875rem;
+        padding: 0.25rem;
+      }
+    }
+  }
+}
