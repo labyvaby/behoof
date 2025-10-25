@@ -1,0 +1,78 @@
+$primary-color: #263141;
+$gray-color: #4b5563;
+$text-color: #0F1113;
+$border-color: #e5e7eb;
+
+.camera-autonomy {
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+  color: $text-color;
+
+  .autonomy-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  .autonomy-description {
+    font-size: 16px;
+    color: $gray-color;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .image-gallery {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
+    .image-item {
+      flex: 1;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      overflow: hidden; 
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .image-caption {
+        display: block;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+        color: $gray-color;
+        background-color: #f9fafb;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .camera-autonomy {
+    padding: 0.5rem;
+
+    .autonomy-title {
+      font-size: 1.25rem;
+    }
+
+    .autonomy-description {
+      font-size: 0.875rem;
+    }
+
+    .image-gallery {
+      flex-direction: column;
+
+      .image-item {
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
