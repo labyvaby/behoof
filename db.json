@@ -1131,6 +1131,23 @@
       "date": "21 апреля 2024 г.",
       "tags": ["Sony", "Игры", "Консоли"]
     }
+  ], 
+  "Presentation": [
+    {
+      "id": 1,
+      "img": "src/assets/images/Presentation/image2.png",
+      "label": "Зелёный"
+    },
+    {
+      "id": 2,
+      "img": "src/assets/images/Presentation/image3.png",
+      "label": "Чёрный"
+    },
+    {
+      "id": 3,
+      "img": "src/assets/images/Presentation/img1.png",
+      "label": "Титановый"
+    }
   ]
   
   
