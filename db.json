@@ -1199,6 +1199,36 @@
       "text": "Супер!",
       "avatar": "src/assets/images/avater/im1.png"
     }
+  ], 
+  " CategoryCards": [
+    {
+      "id": 1,
+      "title": "Whoosh представили функционал электросамокатов",
+      "image": "src/assets/images/CategoryCards/img1.png",
+      "date": "15 апр 2024",
+      "tags": ["Xiaomi", "Смартфоны", "Технологии"]
+    },
+    {
+      "id": 2,
+      "title": "Компания NAVEV представила в России электросамокаты",
+      "image": "src/assets/images/CategoryCards/img2.png",
+      "date": "15 апр 2024",
+      "tags": ["Xiaomi", "Смартфоны", "Технологии"]
+    },
+    {
+      "id": 3,
+      "title": "Xiaomi опубликовала постер Redmi Turbo 3 — он выглядит не так, как ожидалось",
+      "image": "src/assets/images/CategoryCards/img3.png",
+      "date": "15 апр 2024",
+      "tags": ["Xiaomi", "Смартфоны", "Технологии"]
+    },
+    {
+      "id": 4,
+      "title": "Xiaomi опубликовала постер Redmi Turbo 3 — он выглядит не так, как ожидалось",
+      "image": "src/assets/images/CategoryCards/img4.png",
+      "date": "15 апр 2024",
+      "tags": ["Xiaomi", "Смартфоны", "Технологии"]
+    }
   ]
   
   
