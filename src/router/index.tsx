@@ -12,7 +12,8 @@ import Login from '../pages/Login/Sections/Login/Login';
 import Profile from '../pages/Profile/Sections/Profile/Profile';
 import ArticlePage from '../pages/ArticlePage/Sections/ArticlePage/ArticlePage';
 import Articles from '../pages/Articles/Sections/BlogPage/BlogPage'  
-import SelectedPage from '../pages/SelectedPage/Sections/PostPage/PostPage';
+import SelectedPage from '../pages/SelectedPage/Sections/PostPage/PostPage'; 
+import Service from '../pages/Service';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -71,7 +72,11 @@ export const router = createBrowserRouter([
       { 
         path: "SelectedPage",   // 👈 сюда мы заходим через /products
         element: <SelectedPage/>,
-      }
+      }, 
+       { 
+        path: "Service",   // 👈 сюда мы заходим через /products
+        element: <Service/>,
+      }, 
     
 
 

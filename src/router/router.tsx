@@ -12,7 +12,8 @@ import Login from "../pages/Login/Sections/Login/Login";
 import Profile from "../pages/Profile/Sections/Profile/Profile"; 
 import ArticlePage  from "../pages/ArticlePage"; 
 import Articles from '../pages/Articles'  
-import SelectegPage from '../pages/SelectegPage';
+import SelectegPage from '../pages/SelectegPage'; 
+import Service from '../pages/Service';
 
 const routerConfig = createBrowserRouter([
   {
@@ -73,7 +74,11 @@ const routerConfig = createBrowserRouter([
  { 
         path: "SelectedPage",   // 👈 сюда мы заходим через /products
         element: <SelectegPage />,
-      }
+      }, 
+       { 
+        path: "Service",   // 👈 сюда мы заходим через /products
+        element: <Service/>,
+      }, 
     ],
   },
 ]);

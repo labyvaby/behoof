@@ -1,0 +1,67 @@
+.about { 
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 10px;
+  margin-top: 10px;
+
+  h1 {
+    margin-bottom: 12px;
+    font-size: 40px;
+  }
+
+  h2 {
+    margin-bottom: 6px;
+    font-size: 28px;
+  }
+
+  p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+
+  &__content {
+    width: 60%;
+  }
+
+  &__image {
+    width: 60%;
+    img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+}
+
+/* Только для десктопа */
+@media (min-width: 901px) {
+  .about__image {
+    margin-top: 80px; 
+  }
+} 
+
+
+/* Адаптивка */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about__content {
+    width: 100%;
+    order: 1; /* Сначала текст */
+  }
+
+  .about__image {
+    width: 100%;
+    order: 2; /* Потом картинка */
+    margin-top: 20px;
+  }
+} 
+@media(max-width: 600px){
+  .link{
+    display: none;
+   
+  }
+}
