@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import Pagination from '@mui/material/Pagination';
-import PaginationItem from '@mui/material/PaginationItem';
+import PaginationItem from '@mui/material/PaginationItem'; 
+
 import './style.scss';
 
 interface ProductItem {
