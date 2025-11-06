@@ -112,10 +112,16 @@
     {
       "id": 1,
       "name": "Apple iPhone 13 Pro Max 256 ГБ серый",
-      "image": "https://asiastore.kg/image/cache/catalog/iphone/iphone15/1515%2B/blue/iphone_15_plus_blue_pdp_image_position-1__ww-en-1200x1200.jpg",
-      "rating": 4.4,
+      "image": "https://asiastore.kg/image/cache/catalog/iphone/iphone15/1515%2B/blue/iphone_15_plus_blue_pdp_image_position-1__ww-en-1200x1200.jpg",  
+       "images": [
+      "https://ir.ozone.ru/s3/multimedia-1-o/wc100/7120451004.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-o/wc100/7120451004.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-o/wc100/7120451004.jpg"
+    ],
+       "rating": 4.4,
       "reviews": 447,
-      "price": 78999,
+      "price": 78999, 
+       "description": "Apple iPhone 13 — компактный смартфон с защищённым корпусом IP68, мощным чипом A15 Bionic, OLED-дисплеем 6.1”, поддержкой MagSafe, быстрой и беспроводной зарядкой. Две камеры по 12 МП с ночным режимом.",
       "specs": [
         "Dual Sim, 3G, 4G, 5G, VoLTE, Wi-Fi",
         "6.1 inches, 1170 x 2532 px Display",
@@ -132,10 +138,16 @@
     {
       "id": 2,
       "name": "Samsung Galaxy S22 128 ГБ черный",
-      "image": "https://ishop124.ru/wp-content/uploads/2023/09/iphone-15-green-ishop-2-600x806.jpg",
+      "image": "https://ishop124.ru/wp-content/uploads/2023/09/iphone-15-green-ishop-2-600x806.jpg", 
+        "images": [
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png"
+    ],
       "rating": 4.6,
       "reviews": 320,
-      "price": 69999,
+      "price": 69999, 
+       "description": "Apple iPhone 13 — компактный смартфон с защищённым корпусом IP68, мощным чипом A15 Bionic, OLED-дисплеем 6.1”, поддержкой MagSafe, быстрой и беспроводной зарядкой. Две камеры по 12 МП с ночным режимом.",
       "specs": [
         "Dual Sim, 4G, 5G, Wi-Fi",
         "6.1 inches, 1080 x 2340 px Display",
@@ -152,10 +164,16 @@
     {
       "id": 3,
       "name": "Xiaomi 13 Pro 256 ГБ серебристый",
-      "image": "https://ishop124.ru/wp-content/uploads/2023/09/iphone-15-black-ishop-2-600x806.jpg",
+      "image": "https://ishop124.ru/wp-content/uploads/2023/09/iphone-15-black-ishop-2-600x806.jpg", 
+        "images": [
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png"
+    ],
       "rating": 4.5,
       "reviews": 215,
-      "price": 59999,
+      "price": 59999, 
+       "description": "Apple iPhone 13 — компактный смартфон с защищённым корпусом IP68, мощным чипом A15 Bionic, OLED-дисплеем 6.1”, поддержкой MagSafe, быстрой и беспроводной зарядкой. Две камеры по 12 МП с ночным режимом.",
       "specs": [
         "Dual Sim, 4G, 5G, Wi-Fi",
         "6.73 inches, 1440 x 3200 px Display",
@@ -172,10 +190,16 @@
     {
       "id": 4,
       "name": "Google Pixel 7 Pro 128 ГБ белый",
-      "image": "src/assets/images/ProductList/img1.png",
+      "image": "src/assets/images/ProductList/img1.png", 
+        "images": [
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png"
+    ],
       "rating": 4.7,
       "reviews": 180,
-      "price": 64999,
+      "price": 64999, 
+       "description": "Apple iPhone 13 — компактный смартфон с защищённым корпусом IP68, мощным чипом A15 Bionic, OLED-дисплеем 6.1”, поддержкой MagSafe, быстрой и беспроводной зарядкой. Две камеры по 12 МП с ночным режимом.",
       "specs": [
         "Dual Sim, 4G, 5G, Wi-Fi",
         "6.7 inches, 1440 x 3120 px Display",
@@ -192,10 +216,16 @@
     {
       "id": 5,
       "name": "OnePlus 11 256 ГБ черный",
-      "image": "src/assets/images/ProductList/img1.png",
+      "image": "src/assets/images/ProductList/img1.png", 
+        "images": [
+      "",
+      "",
+      ""
+    ],
       "rating": 4.4,
       "reviews": 150,
-      "price": 57999,
+      "price": 57999, 
+       "description": "Apple iPhone 13 — компактный смартфон с защищённым корпусом IP68, мощным чипом A15 Bionic, OLED-дисплеем 6.1”, поддержкой MagSafe, быстрой и беспроводной зарядкой. Две камеры по 12 МП с ночным режимом.",
       "specs": [
         "Dual Sim, 4G, 5G, Wi-Fi",
         "6.7 inches, 1440 x 3216 px Display",
@@ -212,10 +242,16 @@
     {
       "id": 6,
       "name": "Samsung Galaxy Z Flip4 256 ГБ фиолетовый",
-      "image": "src/assets/images/ProductList/img1.png",
+      "image": "src/assets/images/ProductList/img1.png", 
+        "images": [
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png"
+    ],
       "rating": 4.3,
       "reviews": 90,
-      "price": 79999,
+      "price": 79999, 
+       "description": "Apple iPhone 13 — компактный смартфон с защищённым корпусом IP68, мощным чипом A15 Bionic, OLED-дисплеем 6.1”, поддержкой MagSafe, быстрой и беспроводной зарядкой. Две камеры по 12 МП с ночным режимом.",
       "specs": [
         "Dual Sim, 4G, 5G, Wi-Fi",
         "6.7 inches, 1080 x 2640 px Foldable Display",
@@ -232,10 +268,16 @@
     {
       "id": 7,
       "name": "Apple iPhone 12 128 ГБ синий",
-      "image": "https://ishop124.ru/wp-content/uploads/2023/09/iphone-15-pink-ishop-2-600x806.jpg",
+      "image": "https://ishop124.ru/wp-content/uploads/2023/09/iphone-15-pink-ishop-2-600x806.jpg", 
+        "images": [
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png"
+    ],
       "rating": 4.5,
       "reviews": 200,
-      "price": 49999,
+      "price": 49999, 
+       "description": "Apple iPhone 13 — компактный смартфон с защищённым корпусом IP68, мощным чипом A15 Bionic, OLED-дисплеем 6.1”, поддержкой MagSafe, быстрой и беспроводной зарядкой. Две камеры по 12 МП с ночным режимом.",
       "specs": [
         "Dual Sim, 4G, 5G, Wi-Fi",
         "6.1 inches, 1170 x 2532 px Display",
@@ -252,10 +294,16 @@
     {
       "id": 8,
       "name": "Xiaomi Redmi Note 12 128 ГБ зеленый",
-      "image": "src/assets/images/ProductList/img1.png",
+      "image": "src/assets/images/ProductList/img1.png", 
+        "images": [
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png"
+    ],
       "rating": 4.2,
       "reviews": 110,
-      "price": 22999,
+      "price": 22999, 
+       "description": "Apple iPhone 13 — компактный смартфон с защищённым корпусом IP68, мощным чипом A15 Bionic, OLED-дисплеем 6.1”, поддержкой MagSafe, быстрой и беспроводной зарядкой. Две камеры по 12 МП с ночным режимом.",
       "specs": [
         "Dual Sim, 4G, 5G, Wi-Fi",
         "6.67 inches, 1080 x 2400 px Display",
@@ -272,10 +320,16 @@
     {
       "id": 9,
       "name": "Google Pixel 6a 128 ГБ черный",
-      "image": "src/assets/images/ProductList/img1.png",
+      "image": "src/assets/images/ProductList/img1.png", 
+        "images": [
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png"
+    ],
       "rating": 4.3,
       "reviews": 95,
-      "price": 34999,
+      "price": 34999, 
+       "description": "Apple iPhone 13 — компактный смартфон с защищённым корпусом IP68, мощным чипом A15 Bionic, OLED-дисплеем 6.1”, поддержкой MagSafe, быстрой и беспроводной зарядкой. Две камеры по 12 МП с ночным режимом.",
       "specs": [
         "Dual Sim, 4G, 5G, Wi-Fi",
         "6.1 inches, 1080 x 2400 px Display",
@@ -292,10 +346,16 @@
     {
       "id": 10,
       "name": "OnePlus Nord 2 128 ГБ синий",
-      "image": "src/assets/images/ProductList/img1.png",
+      "image": "src/assets/images/ProductList/img1.png", 
+        "images": [
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png",
+      "src/assets/images/ProductList/img1.png"
+    ],
       "rating": 4.1,
       "reviews": 85,
-      "price": 29999,
+      "price": 29999, 
+       "description": "Apple iPhone 13 — компактный смартфон с защищённым корпусом IP68, мощным чипом A15 Bionic, OLED-дисплеем 6.1”, поддержкой MagSafe, быстрой и беспроводной зарядкой. Две камеры по 12 МП с ночным режимом.",
       "specs": [
         "Dual Sim, 4G, 5G, Wi-Fi",
         "6.43 inches, 1080 x 2400 px Display",

@@ -35,13 +35,13 @@ const ProductList: React.FC = () => {
   const [page, setPage] = useState(1);
   const itemsPerPage = 4;
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     fetch("http://localhost:3000/ProductItem")
       .then(res => res.json())
       .then(data => setProducts(data));
   }, []);
-
-  const navigate = useNavigate();
 
   const getSortedProducts = () => {
     const sorted = [...products];
@@ -58,13 +58,27 @@ const ProductList: React.FC = () => {
   };
 
   const sortedProducts = getSortedProducts();
-
-
   const startIndex = (page - 1) * itemsPerPage;
   const paginatedProducts = sortedProducts.slice(startIndex, startIndex + itemsPerPage);
 
   const handleChangePage = (_event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
+  };
+
+  const handleAddToCartAndNavigate = (product: ProductItem) => {
+    const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
+
+    const isAlreadyInCart = existingCart.some((p: ProductItem) => p.id === product.id);
+
+    if (!isAlreadyInCart) {
+      const updatedCart = [...existingCart, { ...product, quantity: 1 }];
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      console.log(`✅ ${product.name} добавлен в корзину`);
+    } else {
+      console.log(`⚠️ ${product.name} уже есть в корзине`);
+    }
+
+    navigate(`/product/${product.id}`);
   };
 
   return (
@@ -104,7 +118,7 @@ const ProductList: React.FC = () => {
             <h3 className="productList-name">{item.name}</h3>
 
             <div className="productList-price-block">
-              <div className='logo' >
+              <div className='logo'>
                 <img src="src/assets/icons/ProductList/icon2.svg" alt="logo" />
                 <img src="src/assets/icons/ProductList/icons.svg" alt="" />
               </div>
