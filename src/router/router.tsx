@@ -14,7 +14,7 @@ import ArticlePage  from "../pages/ArticlePage";
 import Articles from '../pages/Articles'  
 import SelectegPage from '../pages/SelectegPage'; 
 import Service from '../pages/Service'; 
-import ProductPage from "../pages/ProductInfo/Sections/ProductPage/ProductPage"; // 👈 добавь этот импорт
+import ProductPage from "../pages/ProductInfo/Sections/ProductPage/ProductPage"; 
 
 const routerConfig = createBrowserRouter([
   {
@@ -83,7 +83,7 @@ const routerConfig = createBrowserRouter([
 
       {
   path: "product/:id",
-  element: <ProductPage />,
+  element: <ProductInfo />,
 }
 
     ],
