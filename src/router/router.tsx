@@ -8,13 +8,13 @@ import NotFound from "../pages/NotFound";
 import Comparison from "../pages/Comparison/Sections/ComparePage/ComparePage";
 import Categories from "../pages/Categories/Sections/Categories/Categories";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
-import Login from "../pages/Login/Sections/Login/Login"; 
-import Profile from "../pages/Profile/Sections/Profile/Profile"; 
-import ArticlePage  from "../pages/ArticlePage"; 
-import Articles from '../pages/Articles'  
-import SelectegPage from '../pages/SelectegPage'; 
-import Service from '../pages/Service'; 
-import ProductPage from "../pages/ProductInfo/Sections/ProductPage/ProductPage"; 
+import Login from "../pages/Login/Sections/Login/Login";
+import Profile from "../pages/Profile/Sections/Profile/Profile";
+import ArticlePage from "../pages/ArticlePage";
+import Articles from '../pages/Articles'
+import SelectegPage from '../pages/SelectegPage';
+import Service from '../pages/Service';
+//import ProductPage from "../pages/ProductInfo/Sections/ProductPage/ProductPage"; 
 
 const routerConfig = createBrowserRouter([
   {
@@ -29,7 +29,7 @@ const routerConfig = createBrowserRouter([
         path: "Productgroup", // 👈 сюда мы заходим через /products
         element: <Productgroup />,
       },
-     
+
       {
         path: "ProductInfo",   // 👈 сюда мы заходим через /products
         element: <ProductInfo />,
@@ -59,32 +59,32 @@ const routerConfig = createBrowserRouter([
         element: <Login onLogin={function (_email: string): void {
           throw new Error("Function not implemented.");
         }} />,
-      }, 
+      },
       {
         path: "Profile",   // 👈 сюда мы заходим через /products
         element: <Profile />,
-      }, 
-         {
+      },
+      {
         path: "ArticlePage",   // 👈 сюда мы заходим через /products
-        element: <ArticlePage/>,
-      },  
+        element: <ArticlePage />,
+      },
       {
         path: "Articles",   // 👈 сюда мы заходим через /products
         element: <Articles />,
       },
- { 
+      {
         path: "SelectedPage",   // 👈 сюда мы заходим через /products
         element: <SelectegPage />,
-      }, 
-       { 
+      },
+      {
         path: "Service",   // 👈 сюда мы заходим через /products
-        element: <Service/>,
-      },  
+        element: <Service />,
+      },
 
       {
-  path: "product/:id",
-  element: <ProductInfo />,
-}
+        path: "product/:id",
+        element: <ProductInfo />,
+      }
 
     ],
   },

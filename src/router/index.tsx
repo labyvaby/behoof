@@ -11,11 +11,10 @@ import PrivacyPolicy from '../pages/PrivacyPolicy';
 import Login from '../pages/Login/Sections/Login/Login';
 import Profile from '../pages/Profile/Sections/Profile/Profile';
 import ArticlePage from '../pages/ArticlePage/Sections/ArticlePage/ArticlePage';
-import Articles from '../pages/Articles/Sections/BlogPage/BlogPage'  
-import SelectedPage from '../pages/SelectedPage/Sections/PostPage/PostPage'; 
-import Service from '../pages/Service'; 
- 
-import ProductPage from "../pages/ProductInfo/Sections/ProductPage/ProductPage"; // 👈 добавь этот импорт
+import Articles from '../pages/Articles/Sections/BlogPage/BlogPage'
+import SelectedPage from '../pages/SelectedPage/Sections/PostPage/PostPage';
+import Service from '../pages/Service';
+import ProductPage from "../pages/ProductInfo/Sections/ProductPage/ProductPage";
 
 export const router = createBrowserRouter([
   {
@@ -71,19 +70,19 @@ export const router = createBrowserRouter([
       {
         path: "Articles",   // 👈 сюда мы заходим через /products
         element: <Articles />,
-      }, 
-      { 
+      },
+      {
         path: "SelectedPage",   // 👈 сюда мы заходим через /products
-        element: <SelectedPage/>,
-      }, 
-       { 
+        element: <SelectedPage />,
+      },
+      {
         path: "Service",   // 👈 сюда мы заходим через /products
-        element: <Service/>,
-      }, 
-    {
-  path: "product/:id",
-  element: <ProductPage />,
-}
+        element: <Service />,
+      },
+      {
+        path: "product/:id",
+        element: <ProductPage />,
+      }
 
 
 

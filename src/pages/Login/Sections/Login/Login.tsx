@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./style.scss";
 
-const Login: React.FC = () => {
+interface LoginProps {
+  onLogin: (email: string, password: string) => void;
+}
+const Login: React.FC<LoginProps> = ({ }) => {
   const [email, setEmail] = useState("");
   const [displayValue, setDisplayValue] = useState("");
   const [password, setPassword] = useState("");
