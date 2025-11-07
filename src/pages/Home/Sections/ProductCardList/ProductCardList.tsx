@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/grid"; 
+import "swiper/css/grid";
 
 import { Navigation, Grid } from "swiper/modules";
 import "./style.scss";
