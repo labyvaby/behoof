@@ -1,12 +1,6 @@
-import * as React from 'react';
-import { useEffect, useState } from 'react';
-import { useNavigate } from "react-router-dom";
-
-import Rating from '@mui/material/Rating';
-import Stack from '@mui/material/Stack';
-import Pagination from '@mui/material/Pagination';
-import PaginationItem from '@mui/material/PaginationItem'; 
-
+import React, { useEffect, useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Rating, Stack, Pagination, PaginationItem } from '@mui/material';
 import './style.scss';
 
 interface ProductItem {
@@ -20,66 +14,55 @@ interface ProductItem {
   features: string[];
 }
 
-const scores = [
-  { name: "Дизайн", value: 4 },
-  { name: "Батарея", value: 1 },
-  { name: "Дисплей", value: 2 },
-  { name: "Камера", value: 5 },
-  { name: "Ответ", value: 4 },
-  { name: "Портативность", value: 3 },
+const SCORES = [
+  { name: 'Дизайн', value: 4 },
+  { name: 'Батарея', value: 1 },
+  { name: 'Дисплей', value: 2 },
+  { name: 'Камера', value: 5 },
+  { name: 'Ответ', value: 4 },
+  { name: 'Портативность', value: 3 },
 ];
+
+const ITEMS_PER_PAGE = 4;
 
 const ProductList: React.FC = () => {
   const [products, setProducts] = useState<ProductItem[]>([]);
   const [sortBy, setSortBy] = useState<string>('relevance');
   const [page, setPage] = useState(1);
-  const itemsPerPage = 4;
+  ;
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/ProductItem")
-      .then(res => res.json())
-      .then(data => setProducts(data));
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch('http://localhost:3000/ProductItem');
+        const data = await res.json();
+        setProducts(data);
+      } catch (err: any) {
+      } finally {
+      }
+    };
+    fetchProducts();
   }, []);
 
-  const getSortedProducts = () => {
-    const sorted = [...products];
-    switch (sortBy) {
-      case 'popularity':
-        return sorted.sort((a, b) => b.rating - a.rating);
-      case 'reviewsCount':
-        return sorted.sort((a, b) => b.reviews - a.reviews);
-      case 'latest':
-        return sorted.sort((a, b) => b.id - a.id);
-      default:
-        return sorted;
-    }
+  const sortFunctions: Record<string, (a: ProductItem, b: ProductItem) => number> = {
+    popularity: (a, b) => b.rating - a.rating,
+    reviewsCount: (a, b) => b.reviews - a.reviews,
+    latest: (a, b) => b.id - a.id,
+    relevance: () => 0,
   };
 
-  const sortedProducts = getSortedProducts();
-  const startIndex = (page - 1) * itemsPerPage;
-  const paginatedProducts = sortedProducts.slice(startIndex, startIndex + itemsPerPage);
+  const sortedProducts = useMemo(() => {
+    return [...products].sort(sortFunctions[sortBy]);
+  }, [products, sortBy]);
 
-  const handleChangePage = (_event: React.ChangeEvent<unknown>, value: number) => {
-    setPage(value);
-  };
+  const paginatedProducts = useMemo(() => {
+    const startIndex = (page - 1) * ITEMS_PER_PAGE;
+    return sortedProducts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [sortedProducts, page]);
 
-  const handleAddToCartAndNavigate = (product: ProductItem) => {
-    const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
 
-    const isAlreadyInCart = existingCart.some((p: ProductItem) => p.id === product.id);
-
-    if (!isAlreadyInCart) {
-      const updatedCart = [...existingCart, { ...product, quantity: 1 }];
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-      console.log(`✅ ${product.name} добавлен в корзину`);
-    } else {
-      console.log(`⚠️ ${product.name} уже есть в корзине`);
-    }
-
-    navigate(`/product/${product.id}`);
-  };
 
   return (
     <div className="productList-list">
@@ -107,18 +90,16 @@ const ProductList: React.FC = () => {
             <div className="productList-rating">
               <span className="productList-rating-value">{item.rating}</span>
               <span className="productList-expert">Оценка экспертов</span>
-              <span className="productList-rating-stars">
-                <Stack spacing={1}>
-                  <Rating name="size-small" value={item.rating} precision={0.1} size="small" />
-                </Stack>
-              </span>
+              <Stack spacing={1}>
+                <Rating value={item.rating} precision={0.1} size="small" readOnly />
+              </Stack>
               <span className="productList-rating-reviews">{item.reviews} отзывов</span>
             </div>
 
             <h3 className="productList-name">{item.name}</h3>
 
             <div className="productList-price-block">
-              <div className='logo'>
+              <div className="logo">
                 <img src="src/assets/icons/ProductList/icon2.svg" alt="logo" />
                 <img src="src/assets/icons/ProductList/icons.svg" alt="" />
               </div>
@@ -127,23 +108,27 @@ const ProductList: React.FC = () => {
 
             <div className="productList-specs-features">
               <ul className="productList-specs">
-                {item.specs.map((spec, idx) => <li key={idx}>{spec}</li>)}
+                {item.specs.map((spec, idx) => (
+                  <li key={idx}>{spec}</li>
+                ))}
               </ul>
 
               <ul className="productList-features">
-                {item.features.map((feature, idx) => <li key={idx}>{feature}</li>)}
+                {item.features.map((feature, idx) => (
+                  <li key={idx}>{feature}</li>
+                ))}
               </ul>
             </div>
           </div>
 
           <div className="productList-main">
             <div className="rating-list">
-              {scores.map((score, i) => (
+              {SCORES.map((score, i) => (
                 <div className="rating-row" key={i}>
                   <span className="rating-label">{score.name}</span>
                   <div className="rating-bar">
                     {Array.from({ length: 5 }).map((_, idx) => (
-                      <div key={idx} className={`segment ${idx < score.value ? "active" : ""}`} />
+                      <div key={idx} className={`segment ${idx < score.value ? 'active' : ''}`} />
                     ))}
                   </div>
                 </div>
@@ -160,15 +145,17 @@ const ProductList: React.FC = () => {
         </div>
       ))}
 
-      <div className='pagination'>
+      <div className="pagination">
         <Stack spacing={1} alignItems="center">
           <Pagination
-            count={Math.ceil(sortedProducts.length / itemsPerPage)}
+            count={Math.ceil(sortedProducts.length / ITEMS_PER_PAGE)}
             page={page}
-            onChange={handleChangePage}
+            onChange={(_, value) => setPage(value)}
             renderItem={(item) => {
-              if (item.type === 'previous') return <PaginationItem {...item} children="Назад" />;
-              if (item.type === 'next') return <PaginationItem {...item} children="Вперед" />;
+              if (item.type === 'previous')
+                return <PaginationItem {...item} children="Назад" />;
+              if (item.type === 'next')
+                return <PaginationItem {...item} children="Вперёд" />;
               return <PaginationItem {...item} />;
             }}
           />
