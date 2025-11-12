@@ -1,0 +1,160 @@
+.article-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .breadcrumb {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 15px;
+  }
+
+  .article-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 25px;
+  }
+
+  .article-content {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .article-main {
+    flex: 2;
+
+    .article-image {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .article-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #374151;
+    }
+  }
+
+  .article-sidebar {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 15px;
+
+    .sidebar-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .smartphone-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .smartphone-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 0;
+        border-bottom: 1px solid #f3f4f6;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .smartphone-img {
+          width: 55px;
+          height: 55px;
+          border-radius: 8px;
+          object-fit: cover;
+        }
+
+        .smartphone-info {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+
+          .smartphone-rank {
+            color: #ef4444;
+            font-weight: 500;
+            font-size: 14px;
+          }
+
+          .smartphone-name {
+            font-weight: 700;
+            font-size: 16px;
+            color: #0f1113;
+          }
+
+          .smartphone-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            .stars {
+              color: #fbbf24;
+              font-size: 14px;
+            }
+
+            .value {
+              font-size: 14px;
+              color: #4b5563;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .article-page {
+    padding: 0;
+    .breadcrumb {
+      display: none;
+    }
+    .article-title {
+      font-size: 22px;
+      padding: 0 15px;
+    }
+
+    .article-content {
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+
+    .article-sidebar {
+      width: 100%;
+      border-radius: 0;
+      border: none;
+      padding: 20px;
+      background: #fff;
+      box-shadow: none;
+      margin: 0;
+    }
+
+    .article-main {
+      padding: 15px;
+
+      .article-image {
+        border-radius: 0;
+        margin-bottom: 10px;
+      }
+
+      .article-text {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+  }
+}

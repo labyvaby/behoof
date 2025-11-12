@@ -1,0 +1,109 @@
+$primary-color: #696969;
+$gray-color: #6b7280;
+$text-color: #111827;
+$border-color: #e5e7eb;
+$card-bg: #f9fafb;
+
+.category-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  .category-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $primary-color;
+   // margin-bottom: 1rem;
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .category-card {
+    background-color: $card-bg;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .category-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .category-content {
+      padding: 1rem;
+
+      .category-title-text {
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: $text-color;
+        margin-bottom: 0.5rem;
+      }
+
+      .category-date {
+        font-size: 0.875rem;
+        color: $gray-color;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .category-tags {
+        .category-tag {
+          display: inline-block;
+          padding: 0.25rem 0.5rem;
+          background-color: #e0e7ff;
+          color: $primary-color;
+          font-size: 0.875rem;
+          border-radius: 4px;
+          margin-right: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .category-container {
+    padding: 0.5rem;
+
+    .category-title {
+      font-size: 1.25rem;
+    }
+
+    .category-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .category-card {
+      .category-image {
+        height: 120px;
+      }
+
+      .category-content {
+        .category-title-text {
+          font-size: 1rem;
+        }
+
+        .category-date {
+          font-size: 0.75rem;
+        }
+
+        .category-tag {
+          font-size: 0.75rem;
+          padding: 0.2rem 0.4rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,265 @@
+.profile-page {
+  padding: 15px; 
+  background: #fff;
+  font-family: "Inter", sans-serif;
+
+  .breadcrumbs {
+    color: #7c8b9a;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .profile-name {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+    .edit-icon {
+      font-size: 16px;
+      color: #7c8b9a;
+      cursor: pointer;
+    }
+  } 
+   .setting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+} 
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #FF4D4D;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+}
+  
+
+
+.settings-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  .setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #f9fafb;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #eef2f6;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    span {
+      color: #1c2230;
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
+
+.dropdown {
+  list-style: none;
+  padding: 8px 0;
+  margin: 4px 0 0 0;
+  background: #fff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+
+  .dropdown-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #1c2230;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #f2f4f7;
+    }
+  }
+}
+
+
+
+
+.label-text {
+  user-select: none;
+}
+
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: #f5f7fb;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+
+    &:hover {
+      background: #eef2f8;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .setting {
+      margin-bottom: 15px;
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 15px;
+        color: #333;
+      }
+
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .setting-item {
+      font-size: 15px;
+      color: #4f6786;
+      padding: 8px 0;
+      border-top: 1px solid #e2e6ec;
+    }
+
+    .support-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      border-radius: 8px;
+      padding: 10px 15px;
+      font-size: 15px;
+      margin-bottom: 15px;
+
+      .badge {
+        background: #ff4d4d;
+        color: white;
+        border-radius: 50%;
+        font-size: 13px;
+        padding: 3px 8px;
+      }
+    }
+
+    .support-text {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;  
+      
+      .h2{ 
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #2b2b2b;
+      }
+    }
+
+    .support-btn {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 15px 5px;
+      font-size: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: #ff1f1f;
+      }
+    }
+
+    .account-list {
+      list-style: none;
+      padding: 0;
+      font-size: 15px;
+      color: #4f6786;
+
+      li {
+        padding: 10px 0;
+        border-top: 1px solid #e2e6ec;
+        cursor: pointer;
+
+        &:hover {
+          color: #ff4d4d;
+        }
+      }
+    }
+  }
+}

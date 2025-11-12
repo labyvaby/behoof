@@ -5,6 +5,20 @@
   padding: 1rem;
 }
 
+.productList-filter-select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.productList-filter-select option:checked {
+  color: #ff4d4d;
+  background: #ffeeee;
+}
+
 .productList-card {
   display: flex;
   align-items: flex-start;
@@ -84,7 +98,17 @@
   align-items: flex-end;
   gap: 0.25rem;
   position: relative;
-  top: -25px;
+  top: -55px;
+}
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  object-fit: contain;
 }
 
 .productList-discount {
@@ -189,7 +213,7 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
-} 
+}
 .pagination {
   margin: 30px 0;
   display: flex;
@@ -202,17 +226,16 @@
   }
 
   .Mui-selected {
-    background-color: #ff4d4f !important; 
+    background-color: #ff4d4f !important;
     color: #fff !important;
     border-radius: 8px !important;
   }
 
   .MuiPaginationItem-previousNext {
-    color: #ff4d4f !important; 
+    color: #ff4d4f !important;
     font-weight: 600;
   }
 }
-
 
 @media (max-width: 768px) {
   .productList-card {
@@ -232,6 +255,7 @@
   }
 
   .productList-main {
+    display: none;
     width: 100%;
     margin-left: 0;
     align-items: flex-start;
@@ -239,7 +263,16 @@
 
   .productList-price-block {
     margin-right: 42vh;
-    margin-top: 5vh;
+    margin-top: 9vh;
+  }
+  .logo {
+    order: 1;
+    margin-left: 10px;
+  }
+  .logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
   }
 
   .rating-list {

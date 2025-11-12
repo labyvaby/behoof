@@ -1,12 +1,7 @@
-import * as React from 'react';
-import { useEffect, useState } from 'react';
-
-import Rating from '@mui/material/Rating';
-import Stack from '@mui/material/Stack';
-//import Typography from '@mui/material/Typography';
-import Pagination from '@mui/material/Pagination';
+import React, { useEffect, useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Rating, Stack, Pagination, PaginationItem } from '@mui/material';
 import './style.scss';
-import PaginationItem from '@mui/material/PaginationItem';
 
 interface ProductItem {
   id: number;
@@ -19,44 +14,75 @@ interface ProductItem {
   features: string[];
 }
 
-const scores = [
-  { name: "Дизайн", value: 4 },
-  { name: "Батарея", value: 1 },
-  { name: "Дисплей", value: 2 },
-  { name: "Камера", value: 5 },
-  { name: "Ответ", value: 4 },
-  { name: "Портативность", value: 3 },
+const SCORES = [
+  { name: 'Дизайн', value: 4 },
+  { name: 'Батарея', value: 1 },
+  { name: 'Дисплей', value: 2 },
+  { name: 'Камера', value: 5 },
+  { name: 'Ответ', value: 4 },
+  { name: 'Портативность', value: 3 },
 ];
+
+const ITEMS_PER_PAGE = 4;
 
 const ProductList: React.FC = () => {
   const [products, setProducts] = useState<ProductItem[]>([]);
+  const [sortBy, setSortBy] = useState<string>('relevance');
+  const [page, setPage] = useState(1);
+  ;
+
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/ProductItem")
-      .then(res => res.json())
-      .then(data => setProducts(data));
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch('http://localhost:3000/ProductItem');
+        const data = await res.json();
+        setProducts(data);
+      } catch (err: any) {
+      } finally {
+      }
+    };
+    fetchProducts();
   }, []);
 
-
-
-  const [page, setPage] = React.useState(1);
-
-  const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
-    setPage(value);
+  const sortFunctions: Record<string, (a: ProductItem, b: ProductItem) => number> = {
+    popularity: (a, b) => b.rating - a.rating,
+    reviewsCount: (a, b) => b.reviews - a.reviews,
+    latest: (a, b) => b.id - a.id,
+    relevance: () => 0,
   };
+
+  const sortedProducts = useMemo(() => {
+    return [...products].sort(sortFunctions[sortBy]);
+  }, [products, sortBy]);
+
+  const paginatedProducts = useMemo(() => {
+    const startIndex = (page - 1) * ITEMS_PER_PAGE;
+    return sortedProducts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [sortedProducts, page]);
+
+
 
   return (
     <div className="productList-list">
       <div className="productList-filters">
-        <select className="productList-filter-select">
-          <option>По релевантности</option>
-          <option>По популярности</option>
-          <option>По количеству отзывов</option>
-          <option>По последним отзывам</option>
+        <select
+          className="productList-filter-select"
+          value={sortBy}
+          onChange={(e) => {
+            setSortBy(e.target.value);
+            setPage(1);
+          }}
+        >
+          <option value="relevance">По релевантности</option>
+          <option value="popularity">По популярности</option>
+          <option value="reviewsCount">По количеству отзывов</option>
+          <option value="latest">По последним отзывам</option>
         </select>
       </div>
 
-      {products.map((item) => (
+      {paginatedProducts.map((item) => (
         <div key={item.id} className="productList-card">
           <img src={item.image} alt={item.name} className="productList-image" />
 
@@ -64,70 +90,72 @@ const ProductList: React.FC = () => {
             <div className="productList-rating">
               <span className="productList-rating-value">{item.rating}</span>
               <span className="productList-expert">Оценка экспертов</span>
-              <span className="productList-rating-stars">
-                <Stack spacing={1}>
-                  <Rating name="size-small" value={item.rating} precision={0.1} size="small" />
-                </Stack>
-              </span>
+              <Stack spacing={1}>
+                <Rating value={item.rating} precision={0.1} size="small" readOnly />
+              </Stack>
               <span className="productList-rating-reviews">{item.reviews} отзывов</span>
-              <div className="logo-container">
-                <img src="src/assets/icons/ProductList/icons.svg" alt="live" />
-                <img src="src/assets/icons/ProductList/icon2.svg" alt="logo" />
-              </div>
             </div>
 
             <h3 className="productList-name">{item.name}</h3>
-            <div className="productList-price-block">
-              <div className="productList-price">{item.price} ₽</div>
-              <div className="logo-content">
-                <img src="src/assets/icons/ProductList/icons.svg" alt="visa" />
-                <img src="src/assets/icons/ProductList/icon2.svg" alt="mastercard" />
-              </div>
-            </div>
 
+            <div className="productList-price-block">
+              <div className="logo">
+                <img src="src/assets/icons/ProductList/icon2.svg" alt="logo" />
+                <img src="src/assets/icons/ProductList/icons.svg" alt="" />
+              </div>
+              <div className="productList-price">{item.price} ₽</div>
+            </div>
 
             <div className="productList-specs-features">
               <ul className="productList-specs">
-                {item.specs.map((spec, idx) => <li key={idx}>{spec}</li>)}
+                {item.specs.map((spec, idx) => (
+                  <li key={idx}>{spec}</li>
+                ))}
               </ul>
 
               <ul className="productList-features">
-                {item.features.map((feature, idx) => <li key={idx}>{feature}</li>)}
+                {item.features.map((feature, idx) => (
+                  <li key={idx}>{feature}</li>
+                ))}
               </ul>
             </div>
           </div>
 
           <div className="productList-main">
             <div className="rating-list">
-              {scores.map((score, i) => (
+              {SCORES.map((score, i) => (
                 <div className="rating-row" key={i}>
                   <span className="rating-label">{score.name}</span>
                   <div className="rating-bar">
                     {Array.from({ length: 5 }).map((_, idx) => (
-                      <div key={idx} className={`segment ${idx < score.value ? "active" : ""}`} />
+                      <div key={idx} className={`segment ${idx < score.value ? 'active' : ''}`} />
                     ))}
                   </div>
                 </div>
               ))}
             </div>
 
-            <button className="productList-button">Перейти к товару</button>
+            <button
+              className="productList-button"
+              onClick={() => navigate(`/product/${item.id}`)}
+            >
+              Перейти к товару
+            </button>
           </div>
         </div>
       ))}
-      <div className='pagination'>
+
+      <div className="pagination">
         <Stack spacing={1} alignItems="center">
           <Pagination
-            count={10}
+            count={Math.ceil(sortedProducts.length / ITEMS_PER_PAGE)}
             page={page}
-            onChange={handleChange}
+            onChange={(_, value) => setPage(value)}
             renderItem={(item) => {
-              if (item.type === 'previous') {
+              if (item.type === 'previous')
                 return <PaginationItem {...item} children="Назад" />;
-              }
-              if (item.type === 'next') {
-                return <PaginationItem {...item} children="Вперед" />;
-              }
+              if (item.type === 'next')
+                return <PaginationItem {...item} children="Вперёд" />;
               return <PaginationItem {...item} />;
             }}
           />
