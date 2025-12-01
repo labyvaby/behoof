@@ -10,7 +10,7 @@ interface ProductItem {
   id: number;
   name: string;
   image: string;
-  rating: number; 
+  rating: number;
   reviews: number;
   price: number;
 }
@@ -20,37 +20,50 @@ const Header: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [results, setResults] = useState<ProductItem[]>([]);
   const [isSearchActive, setIsSearchActive] = useState(false);
+  const [favorites, setFavorites] = useState<ProductItem[]>([]);
+
   const navigate = useNavigate();
   const searchRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (searchQuery.trim().length > 0) {
-      const timeout = setTimeout(() => {
-        fetch(`http://localhost:3000/ProductItem?name_like=${searchQuery}`)
-          .then((res) => res.json())
-          .then((data) => setResults(data))
-          .catch(() => setResults([]));
-      }, 500);
-      return () => clearTimeout(timeout);
-    } else {
-      setResults([]);
-    }
-  }, [searchQuery]);
+   
+    const savedFavorites = localStorage.getItem("favorites");
+    if (savedFavorites) setFavorites(JSON.parse(savedFavorites));
 
-  useEffect(() => {
+   
     const handleClickOutside = (e: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
         setIsSearchActive(false);
       }
     };
+
     document.addEventListener("click", handleClickOutside);
+
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
+
+  useEffect(() => {
+    // Поиск с debounce
+    if (!searchQuery.trim()) {
+      setResults([]);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      fetch(`http://localhost:3000/ProductItem?name_like=${searchQuery}`)
+        .then((res) => res.json())
+        .then((data) => setResults(data))
+        .catch(() => setResults([]));
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, [searchQuery]);
 
   return (
     <header className="header">
       <Container>
         <div className="header__content">
+          {/* ЛОГО */}
           <div className="header__logo">
             <Link to="/">
               <img src={logo} alt="Behoof" className="header__logo-icon" />
@@ -65,6 +78,7 @@ const Header: React.FC = () => {
             </div>
           </div>
 
+          {/* ЦЕНТР: каталог + поиск */}
           <div className="header__middle">
             <button
               className="header__catalog"
@@ -107,26 +121,43 @@ const Header: React.FC = () => {
                         />
                         <div className="search-item__info">
                           <span className="search-item__name">{item.name}</span>
-                          <span className="search-item__price">
-                            {item.price} ₽
-                          </span>
+                          <span className="search-item__price">{item.price} ₽</span>
                         </div>
                       </div>
                     ))
                   ) : (
-                    <div className="search-empty"></div>
+                    <div className="search-empty">Ничего не найдено</div>
                   )}
                 </div>
               )}
             </div>
           </div>
 
+          {/* ИКОНКИ */}
           <div className="header__icons">
-            {[Heart, BarChart2, User].map((Icon, idx) => (
-              <button key={idx} className="header__icon">
-                <Icon />
-              </button>
-            ))}
+            <button
+              className="header__icon badge-parent"
+              onClick={() => navigate("/favorites")}
+            >
+              <Heart />
+              {favorites.length > 0 && (
+                <span className="header__badge">{favorites.length}</span>
+              )}
+            </button>
+
+            <button
+              className="header__icon"
+              onClick={() => navigate("/compare")}
+            >
+              <BarChart2 />
+            </button>
+
+            <button
+              className="header__icon"
+              onClick={() => navigate("/profile")}
+            >
+              <User />
+            </button>
           </div>
         </div>
       </Container>

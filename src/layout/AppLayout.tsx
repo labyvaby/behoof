@@ -2,8 +2,8 @@ import { Layout } from 'antd';
 import { Outlet } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import NavBar from '../pages/Home/Sections/NavBar/NavBar';
-
-const { Content, Footer } = Layout;
+import Footer from '../components/Footer/Footer';
+const { Content, } = Layout;
 
 export default function AppLayout() {
   return (
@@ -13,8 +13,9 @@ export default function AppLayout() {
         <div style={{ marginTop: '20px' }}>
           <Outlet />
         </div>
-      </Content>
-      <Footer style={{ textAlign: 'center' }}>© 2025</Footer>  
+      </Content> 
+      <Footer/>
+      
       <NavBar/> 
       
     </Layout>
