@@ -237,6 +237,66 @@
   }
 }
 
+.productList-sale-block {
+  width: 100%;
+  background: #e9fbe8;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  .sale-left {
+    .sale-title {
+      font-size: 14px;
+      color: #4d8d52;
+      margin-bottom: 4px;
+    }
+
+    .sale-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #25a340;
+    }
+  }
+
+  .sale-discount {
+    background: #46d16d;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-align: center;
+
+    p {
+      font-size: 12px;
+      margin: 0;
+    }
+
+    span {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  .sale-old-price {
+    text-align: right;
+
+    p {
+      text-decoration: line-through;
+      color: #0f1113;
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    span {
+      font-size: 10px;
+      color: #4d8d52;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .productList-card {
     flex-direction: column;
