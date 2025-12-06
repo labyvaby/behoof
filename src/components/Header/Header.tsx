@@ -114,20 +114,16 @@ const Header: React.FC = () => {
                           setSearchQuery("");
                         }}
                       >
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          className="search-item__image"
-                        />
+                       <img src="src/assets/icons/header/search.svg" alt="logo" />
                         <div className="search-item__info">
                           <span className="search-item__name">{item.name}</span>
-                          <span className="search-item__price">{item.price} ₽</span>
+                          {/* <span className="search-item__price">{item.price} ₽</span> */}
                         </div>
                       </div>
                     ))
                   ) : (
                     <div className="search-empty">Ничего не найдено</div>
-                  )}
+                  )} 
                 </div>
               )}
             </div>
