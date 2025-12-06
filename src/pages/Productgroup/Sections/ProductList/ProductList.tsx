@@ -97,13 +97,27 @@ const ProductList: React.FC = () => {
             </div>
 
             <h3 className="productList-name">{item.name}</h3>
+            <div className="productList-sale-block">
+              <div className="sale-left">
+                <p className="sale-title">Цена на распродажу</p>
+                <p className="sale-price">55 000 990 ₽</p>
+              </div>
+
+              <div className="sale-discount">
+                <p>Скидка</p>
+                <span>45%</span>     
+             
+              </div>
+
+              <div className="sale-old-price">
+                <p>90 500 990 ₽</p>
+                <span>Стало дешевле на 35 000 990 ₽ за последние 6 дней</span>
+              </div>
+            </div>
 
             <div className="productList-price-block">
-              <div className="logo">
-                <img src="src/assets/icons/ProductList/icon2.svg" alt="logo" />
-                <img src="src/assets/icons/ProductList/icons.svg" alt="" />
-              </div>
-              <div className="productList-price">{item.price} ₽</div>
+
+
             </div>
 
             <div className="productList-specs-features">
