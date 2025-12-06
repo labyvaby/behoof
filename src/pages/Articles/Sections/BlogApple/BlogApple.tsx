@@ -12,7 +12,7 @@ interface Post {
 const BlogApple: React.FC = () => {
    const [posts, setPosts] = useState<Post[]>([]);
    const [currentPage, setCurrentPage] = useState(1);
-   const postsPerPage = 6;
+   const postsPerPage = 2;
 
    useEffect(() => {
       fetch("http://localhost:3000/BlogApple")

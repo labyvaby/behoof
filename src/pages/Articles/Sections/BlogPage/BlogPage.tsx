@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
 const BlogPage: React.FC = () => {
+  const [query, setQuery] = useState("");
+
   const categories = [
     "Все",
     "Смартфоны",
@@ -13,7 +15,6 @@ const BlogPage: React.FC = () => {
     "Техника для дома",
     "Аудиотехника",
     "Фото/видео",
-
   ];
 
   const tags = ["Xiaomi", "Смартфоны", "Технологии", "Apple", "Техника"];
@@ -56,14 +57,16 @@ const BlogPage: React.FC = () => {
     },
     {
       id: 6,
-      title: "Xiaomi опубликовала постер Redmi Turbo 3 — он выглядит не так, как ожидалось",
+      title: "ah Khalib feat. Айжан Байсакова – На параллельных путях ",
       date: "15 апреля 2024 г.",
       image: "src/assets/images/BlogPage/img5.png",
       tags: ["Xiaomi", "Смартфоны", "Технологии"],
     },
-
-
   ];
+
+  const filteredPosts = posts.filter((p) =>
+    p.title.toLowerCase().includes(query.toLowerCase())
+  );
 
   return (
     <div className="blog">
@@ -72,16 +75,30 @@ const BlogPage: React.FC = () => {
         <span className="breadcrumb__divider"> / </span>
         <span className="breadcrumb__current">Блог</span>
       </div>
+
       <div className="blog__header">
         <h1>Блог</h1>
+
         <div className="blog__search-tags">
           <div className="search-block">
             <h3>
-              Поиск <span>статй</span>
+              Поиск <span>статей</span>
             </h3>
+
             <div className="input-wrapper">
-              <span className="input-icon"><img src="src/assets/icons/BlogPage/Search.svg" alt="logo Search" /></span>
-              <input type="text" placeholder="Ищите рубрику или название статьи" />
+              <span className="input-icon">
+                <img
+                  src="src/assets/icons/BlogPage/Search.svg"
+                  alt="logo Search"
+                />
+              </span>
+
+              <input
+                type="text"
+                placeholder="Ищите рубрику или название статьи"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
             </div>
           </div>
 
@@ -98,6 +115,7 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </div>
+
         <div className="categories">
           {categories.map((cat, i) => (
             <button key={i} className={i === 0 ? "active" : ""}>
@@ -106,25 +124,42 @@ const BlogPage: React.FC = () => {
           ))}
         </div>
       </div>
+
       <div className="blog__grid">
-        {posts.map((post) => (
-          <div
-            key={post.id}
-            className={`blog-card ${post.id === 6 ? "blog-card--wide" : ""}`}
-          >
-            <img src={post.image} alt={post.title} />
-            <div className="blog-card__content">
-              <h2>{post.title}</h2>
-              <p className="date">{post.date}</p>
-              <div className="tags">
-                {post.tags.map((tag, i) => (
-                  <span key={i}>{tag}</span>
-                ))}
+        {(query.length > 0 ? filteredPosts : posts).map((post) =>
+          post.id === 6 ? (
+            <div key={post.id} className="blog-card-wide">
+              <img src={post.image} alt={post.title} className="blog-card-wide__image" />
+
+              <div className="blog-card-wide__content">
+                <h2>{post.title}</h2>
+                <p className="date">{post.date}</p>
+
+                <div className="tags">
+                  {post.tags.map((tag, i) => (
+                    <span key={i}>{tag}</span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ) : (
+            <div key={post.id} className="blog-card">
+              <img src={post.image} alt={post.title} />
+              <div className="blog-card__content">
+                <h2>{post.title}</h2>
+                <p className="date">{post.date}</p>
+
+                <div className="tags">
+                  {post.tags.map((tag, i) => (
+                    <span key={i}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )
+        )}
       </div>
+
 
     </div>
   );
