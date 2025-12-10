@@ -15,7 +15,7 @@ import Articles from '../pages/Articles/Sections/BlogPage/BlogPage'
 import SelectedPage from '../pages/SelectedPage/Sections/PostPage/PostPage';
 import Service from '../pages/Service';
 import ProductPage from "../pages/ProductInfo/Sections/ProductPage/ProductPage";
-
+import MockProducts from '../pages/MockProducts';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -78,6 +78,10 @@ export const router = createBrowserRouter([
       {
         path: "Service",   // 👈 сюда мы заходим через /products
         element: <Service />,
+      }, 
+        {
+        path: "MockProducts",   // 👈 сюда мы заходим через /products
+        element: <MockProducts />,
       },
       {
         path: "product/:id",
