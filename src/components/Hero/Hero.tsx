@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 const Hero: React.FC = () => {
@@ -10,14 +11,14 @@ const Hero: React.FC = () => {
           <span className="black-text">магазинах</span>
         </h1>
         <p>найди, сравни, выбирай!</p>
-        <button className="hero-button">
+        <Link to="/categories" className="hero-button">
           Перейти к категориям
           <img
             src="src/assets/icons/hero/Arrow - Right 2.svg"
             alt="arrow"
             className="hero-arrow"
           />
-        </button>
+        </Link>
       </div>
 
       <div className="hero-block-mini">
@@ -27,14 +28,14 @@ const Hero: React.FC = () => {
 
         <p>2023 год </p>
 
-        <button className="hero-button">
+        <Link to="/ArticlePage"className="hero-button">
           Смотреть
           <img
             src="src/assets/icons/hero/Arrow - Right 2.svg"
             alt="arrow"
             className="hero-arrow"
           />
-        </button>
+        </Link>
 
         <img
           src="src/assets/images/Hero/image3.png"

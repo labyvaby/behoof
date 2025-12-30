@@ -15,7 +15,7 @@ const ArticlePage: React.FC = () => {
   const [smartphones, setSmartphones] = useState<Smartphone[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/smartphones")
+    fetch("http://localhost:4091/smartphones")
       .then((res) => res.json())
       .then((data) => setSmartphones(data))
   }, []);

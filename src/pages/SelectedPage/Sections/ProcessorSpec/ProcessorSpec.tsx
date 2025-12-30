@@ -10,7 +10,7 @@ const ProcessorSpec: React.FC = () => {
   const [specs, setSpecs] = useState<ProcessorItem[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/processor")
+    fetch("http://localhost:4091/processor")
       .then(res => res.json())
       .then(data => setSpecs(data));
   }, []);

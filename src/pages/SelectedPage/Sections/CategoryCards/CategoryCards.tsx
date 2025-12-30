@@ -13,7 +13,7 @@ const CategoryCards: React.FC = () => {
   const [categories, setCategories] = useState<CategoryCards[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/ CategoryCards")
+    fetch("http://localhost:4091/ CategoryCards")
       .then(res => res.json())
       .then(data => setCategories(data))
      

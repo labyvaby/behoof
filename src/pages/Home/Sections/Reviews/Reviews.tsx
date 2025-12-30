@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, } from "react"; 
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 interface ReviewItem {
@@ -12,7 +13,7 @@ const Reviews: React.FC = () => {
     const [reviews, setReviews] = useState<ReviewItem[]>([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/reviews")
+        fetch("http://localhost:4091/reviews")
             .then((res) => res.json())
             .then((data) => setReviews(data))
     }, []);
@@ -20,10 +21,10 @@ const Reviews: React.FC = () => {
     return (
         <section className="container">
             <div className="container__header">
-                <h2>Отзывы</h2>
-                <a href="/" className="container__link">
+                <h2>Обзоры</h2>
+                <Link to="/PageReviews"className="container__link">
                     Смотреть все →
-                </a>
+                </Link>
             </div>
 
             <div className="reviews-grid">
@@ -40,7 +41,7 @@ const Reviews: React.FC = () => {
                         <div className="review-card__content">
                             <h3 className="review-card__title">{item.title}</h3>
                             <p className="review-card__text">{item.text}</p>
-                            <a href="/" className="review-card__link">
+                            <a href="/PageReviews" className="review-card__link">
                                 Смотреть
                                 <img
                                     src="src/assets/icons/Review/iconc- Right 2.svg"

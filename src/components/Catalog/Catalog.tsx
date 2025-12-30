@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Menu, Layout, Typography, Button } from "antd";
-import { RightOutlined, CloseOutlined, ArrowLeftOutlined } from "@ant-design/icons";
+import {
+  RightOutlined,
+  CloseOutlined,
+  ArrowLeftOutlined,
+} from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 import "./style.scss";
 
 const { Sider, Content } = Layout;
@@ -14,11 +19,15 @@ type CatalogItem = {
 };
 
 const Catalog: React.FC = () => {
+  const navigate = useNavigate();
+
   const [items, setItems] = useState<CatalogItem[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
-  const [view, setView] = useState<"categories" | "subcategories" | "children">("categories");
+  const [view, setView] = useState<"categories" | "subcategories" | "children">(
+    "categories"
+  );
 
   const [visibleBlocks, setVisibleBlocks] = useState({
     categories: true,
@@ -27,7 +36,7 @@ const Catalog: React.FC = () => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3000/catalog")
+    fetch("http://localhost:4091/catalog")
       .then((res) => res.json())
       .then((data) => setItems(data));
 
@@ -37,12 +46,16 @@ const Catalog: React.FC = () => {
   }, []);
 
   const category = items.find((i) => i.key === selectedCategory);
-  const subcategory = category?.children?.find((i) => i.key === selectedSubcategory);
+  const subcategory = category?.children?.find(
+    (i) => i.key === selectedSubcategory
+  );
 
+  // 🔥 ГЛАВНОЕ ИЗМЕНЕНИЕ ЗДЕСЬ
   const renderMenuBlock = (
     items: CatalogItem[],
-    onClick?: (key: string) => void,
-    blockKey?: keyof typeof visibleBlocks
+    onSelect?: (key: string) => void,
+    blockKey?: keyof typeof visibleBlocks,
+    basePath: string = "/Productgroup"
   ) => {
     if (!items || (blockKey && !visibleBlocks[blockKey])) return null;
 
@@ -51,21 +64,29 @@ const Catalog: React.FC = () => {
         {blockKey && (
           <CloseOutlined
             className="close-icon"
-            onClick={() => setVisibleBlocks((prev) => ({ ...prev, [blockKey]: false }))}
+            onClick={() =>
+              setVisibleBlocks((prev) => ({ ...prev, [blockKey]: false }))
+            }
           />
         )}
+
         <Menu
           mode="inline"
+          onClick={({ key }) => {
+            onSelect?.(key);            
+            navigate(`${basePath}/${key}`); 
+          }}
           items={items.map(({ key, label, highlight }) => ({
             key,
             label: (
               <div className="menu-item-with-icon">
-                {highlight ? <span style={{ color: highlight }}>{label}</span> : label}
+                <span style={highlight ? { color: highlight } : undefined}>
+                  {label}
+                </span>
                 <RightOutlined />
               </div>
             ),
           }))}
-          onClick={(e) => onClick && onClick(e.key)}
         />
       </div>
     );
@@ -96,7 +117,7 @@ const Catalog: React.FC = () => {
               }
             }}
           >
-            <ArrowLeftOutlined style={{ fontSize: 16 }} />
+            <ArrowLeftOutlined />
           </Button>
         )}
 
@@ -115,7 +136,7 @@ const Catalog: React.FC = () => {
 
         {view === "children" &&
           subcategory?.children &&
-          renderMenuBlock(subcategory.children, undefined, "children")}
+          renderMenuBlock(subcategory.children)}
       </div>
     );
   }
@@ -124,8 +145,8 @@ const Catalog: React.FC = () => {
   return (
     <div className="catalog" style={{ padding: 0, margin: 0 }}>
       <Title level={2}>Каталог товаров</Title>
+
       <Layout className="catalog__wrapper">
-        {/* 1 колонка — категории */}
         <Sider width={280} className="catalog__list">
           {renderMenuBlock(items, (key) => {
             setSelectedCategory(key);
@@ -133,16 +154,16 @@ const Catalog: React.FC = () => {
           })}
         </Sider>
 
-        {/* 2 колонка — подкатегории */}
         <Sider width={280} className="catalog__list">
           {category?.children ? (
-            renderMenuBlock(category.children, (key) => setSelectedSubcategory(key))
+            renderMenuBlock(category.children, (key) =>
+              setSelectedSubcategory(key)
+            )
           ) : (
             <p className="catalog__empty">Нет категорий</p>
           )}
         </Sider>
 
-        {/* 3 колонка — вложенные элементы */}
         <Content className="catalog__lest">
           {subcategory?.children ? (
             renderMenuBlock(subcategory.children)
@@ -151,7 +172,6 @@ const Catalog: React.FC = () => {
           )}
         </Content>
 
-        {/* 4 колонка — баннер */}
         <Content className="catalog__banner">
           <img src="" alt="Реклама" />
         </Content>

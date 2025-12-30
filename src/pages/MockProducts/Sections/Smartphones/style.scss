@@ -23,7 +23,171 @@
   display: flex;
   gap: 15px;
   margin-bottom: 30px;
+} 
+
+// Контейнер фильтра
+.filter-dropdown-container {
+    position: relative;
+    display: inline-block;
 }
+
+// Само выпадающее меню
+.filter-dropdown-menu {
+    position: absolute;
+    top: 100%; // Расположение сразу под кнопкой
+    left: 0;
+    z-index: 50; // Убедитесь, что оно выше других элементов
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 280px; // Ширина, как на скриншоте
+    padding: 15px;
+    max-height: 400px; // Ограничение высоты, чтобы был скролл
+    overflow-y: auto;
+}
+
+.filter-dropdown-header {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+    h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+
+.price-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    input {
+        width: 50%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-align: center;
+    }
+}
+
+.price-slider-placeholder {
+    // Стиль для вашей шкалы, как на скриншоте (красный ползунок)
+    height: 10px;
+    background-color: #f37f7f;
+    border-radius: 5px;
+    margin-top: 15px;
+    // ... дополнительные стили для имитации слайдера
+}
+
+.categories-list {
+    .category-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+        border-bottom: 1px solid #f0f0f0;
+
+        .category-label {
+            display: flex;
+            align-items: center;
+            input[type="checkbox"] {
+                margin-right: 10px;
+            }
+        }
+        .arrow {
+            color: #be3f3f;
+        }
+    }
+    .subcategories-list {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column; 
+        
+        .subcategory-label {
+            display: block;
+            padding: 5px 0; 
+            color: #7E8794;
+            input[type="checkbox"] {
+                margin-right: 10px;  
+               
+            } 
+            
+        }
+    }
+}
+
+
+.filter-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 15px;
+    
+    .apply-btn {
+        flex-grow: 1;
+        background-color: #ff4d4d; // Красный цвет
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .clear-btn {
+        flex-grow: 1;
+        background-color: #f0f0f0; // Светлый фон
+        color: #333;
+        border: none;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+}
+
+// Стили для контейнера сортировки (если не было)
+.sort-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.sort-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 50;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    min-width: 200px;
+}
+.sort-option {
+    padding: 8px 12px;
+    cursor: pointer;
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .filter-btn {
   background: #f7f7f7;
@@ -123,6 +287,37 @@
     color: #6b7280;
   }
 }
+ 
+.sort-dropdown-container {
+  position: relative; // Для позиционирования выпадающего меню относительно кнопки
+  display: inline-block;
+}
+
+.sort-dropdown-menu {
+  position: absolute;
+  top: 100%; // Располагает меню прямо под кнопкой
+  left: 0;
+  z-index: 10;
+  background-color: white; // Фон меню
+  border: 1px solid #FFEEEE;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 200px;
+}
+
+.sort-option {
+  padding: 8px 12px;
+  cursor: pointer;
+  &:hover {
+    background-color: #FFEEEE; // Эффект наведения
+  }
+}
+
+// ... остальные ваши стили
+ 
+
+
 
 .sale-info {
   width: 100%;

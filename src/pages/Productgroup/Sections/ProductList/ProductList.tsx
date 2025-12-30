@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Rating, Stack, Pagination, PaginationItem } from '@mui/material';
+import { Rating, Stack, Pagination, PaginationItem } from '@mui/material';  
+
+
 import './style.scss';
 
 interface ProductItem {
@@ -36,7 +38,8 @@ const ProductList: React.FC = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch('http://localhost:3000/ProductItem');
+        const res = await  
+        fetch('http://localhost:4091/ProductItem'); 
         const data = await res.json();
         setProducts(data);
       } catch (err: any) {

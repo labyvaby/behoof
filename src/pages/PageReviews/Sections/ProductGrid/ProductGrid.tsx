@@ -13,7 +13,7 @@ const ProductGrid: React.FC = () => {
   const [reviews, setReviews] = useState<ProductGridItem[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/ProductGrid")
+    fetch("http://localhost:4091/ProductGrid")
       .then((res) => res.json())
       .then((data) => setReviews(data))
   }, []);

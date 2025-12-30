@@ -66,7 +66,7 @@ const ProductPage: React.FC = () => {
   useEffect(() => {
     if (!id) return;
 
-    fetch(`http://localhost:3000/ProductItem/${id}`)
+    fetch(`http://localhost:4091/ProductItem/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Товар не найден");
         return res.json();
@@ -77,12 +77,12 @@ const ProductPage: React.FC = () => {
       })
       .catch((err) => console.error(err));
 
-    fetch("http://localhost:3000/shops")
+    fetch("http://localhost:4091/shops")
       .then((res) => res.json())
       .then((data) => setShops(data))
       .catch((err) => console.error(err));
 
-    fetch("http://localhost:3000/filters")
+    fetch("http://localhost:4091/filters")
       .then((res) => res.json())
       .then((data) => setFilters(data))
       .catch((err) => console.error(err));

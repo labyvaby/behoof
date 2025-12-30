@@ -18,7 +18,7 @@ const PrivacyPolicy: React.FC = () => {
   const [active, setActive] = useState<number>(1);
 
   useEffect(() => {
-    fetch("http://localhost:3000/privacySections")
+    fetch("http://localhost:4091/privacySections")
       .then((res) => res.json())
       .then((data) => setSections(data));
   }, []);

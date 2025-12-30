@@ -40,21 +40,26 @@
 }
 
 
-    .hero-button {
-      background-color: #ff5555;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-left: 10px;
-      margin-top: 20px;
+  .hero-button {
+  background-color: #ff5555;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 20px;
+  text-decoration: none; /* если это <a>, чтобы убрать подчеркивание */
+  display: inline-flex;   /* чтобы картинка выравнивалась с текстом */
+  align-items: center;    /* вертикальное выравнивание */
+  gap: 8px;               /* расстояние между текстом и иконкой */
+}
 
-      &:hover {
-        background-color: #ff7777;
-      }
-    }
+.hero-button:hover {
+  background-color: #ff7777;
+}
+
 
     .hero-image {
       max-width: 35%;

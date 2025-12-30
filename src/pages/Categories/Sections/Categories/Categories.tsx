@@ -17,7 +17,7 @@ const Categories: React.FC = () => {
     const [] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:3000/categories')
+        fetch('http://localhost:4091/categories')
             .then((res) => res.json())
             .then((json) => {
                 setData(json.categories ?? json);

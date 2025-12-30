@@ -14,7 +14,7 @@ const SearchPage: React.FC = () => {
   const [filtered, setFiltered] = useState<ProductGridItem[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/ProductGrid")
+    fetch("http://localhost:4091/ProductGrid")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

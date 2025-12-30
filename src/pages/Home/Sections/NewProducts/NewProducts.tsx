@@ -15,7 +15,7 @@ const NewProducts: React.FC = () => {
   const [favorites, setFavorites] = useState<number[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch("http://localhost:4091/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "Productgroup",   // 👈 сюда мы заходим через /products
+        path: "Productgroup/:categoty",   // 👈 сюда мы заходим через /products
         element: <Productgroup />,
       },
       {

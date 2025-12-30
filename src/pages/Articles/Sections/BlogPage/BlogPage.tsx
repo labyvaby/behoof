@@ -127,7 +127,8 @@ const BlogPage: React.FC = () => {
 
       <div className="blog__grid">
         {(query.length > 0 ? filteredPosts : posts).map((post) =>
-          post.id === 6 ? (
+          post.id === 6 ? ( 
+            
             <div key={post.id} className="blog-card-wide">
               <img src={post.image} alt={post.title} className="blog-card-wide__image" />
 

@@ -14,7 +14,7 @@ const CommentsSection: React.FC = () => {
     const [,setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:3000/CommentsSection')
+        fetch('http://localhost:4091/CommentsSection')
             .then((res) => res.json())
             .then((data) => {
                 setComments(data);

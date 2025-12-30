@@ -25,7 +25,7 @@ const ComparePage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/comparePage")
+    fetch("http://localhost:4091/comparePage")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

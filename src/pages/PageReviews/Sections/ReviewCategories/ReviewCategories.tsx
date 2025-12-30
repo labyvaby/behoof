@@ -12,7 +12,7 @@ const ReviewCategories: React.FC = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/ReviewCategories")
+    fetch("http://localhost:4091/ReviewCategories")
       .then((res) => res.json())
       .then((data: Category[]) => {
         setCategories(data);

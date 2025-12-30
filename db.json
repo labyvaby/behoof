@@ -107,10 +107,12 @@
       "text": "Lorem ipsum dolor sit amet consectetur. Rhoncus risus viverra."
     }
   ],
-
+ 
+  
   "ProductItem": [
     {
       "id": 1,
+      "category": "smartphones",
       "name": "Apple iPhone 13 Pro Max 256 ГБ серый",
       "image": "https://asiastore.kg/image/cache/catalog/iphone/iphone15/1515%2B/blue/iphone_15_plus_blue_pdp_image_position-1__ww-en-1200x1200.jpg",  
        "images": [
@@ -137,6 +139,7 @@
     },
     {
       "id": 2,
+      "category": "smartphones",
       "name": "Samsung Galaxy S22 128 ГБ черный",
       "image": "https://ishop124.ru/wp-content/uploads/2023/09/iphone-15-green-ishop-2-600x806.jpg", 
         "images": [
@@ -163,6 +166,7 @@
     },
     {
       "id": 3,
+      "category": "smartphones",
       "name": "Xiaomi 13 Pro 256 ГБ серебристый",
       "image": "https://ishop124.ru/wp-content/uploads/2023/09/iphone-15-black-ishop-2-600x806.jpg", 
         "images": [
@@ -189,6 +193,7 @@
     },
     {
       "id": 4,
+      "category": "smartphones",
       "name": "Google Pixel 7 Pro 128 ГБ белый",
       "image": "src/assets/images/ProductList/img1.png", 
         "images": [
@@ -215,6 +220,7 @@
     },
     {
       "id": 5,
+      "category": "smartphones",
       "name": "OnePlus 11 256 ГБ черный",
       "image": "src/assets/images/ProductList/img1.png", 
         "images": [
@@ -368,8 +374,129 @@
         "4500 mAh Battery",
         "Android 12"
       ]
+    },
+    {
+      "id": 11,
+      "category": "laptops",
+      "name": "MacBook Pro 14-inch M2",
+      "image": "src/assets/images/ProductList/img1.png", 
+      "images": [
+        "src/assets/images/ProductList/img1.png",
+        "src/assets/images/ProductList/img1.png",
+        "src/assets/images/ProductList/img1.png"
+      ],
+      "rating": 4.8,
+      "reviews": 150,
+      "price": 199999, 
+      "description": "Powerful laptop for professionals.",
+      "specs": [
+        "M2 chip",
+        "14-inch Liquid Retina XDR display",
+        "16 GB RAM",
+        "512 GB SSD"
+      ],
+      "features": [
+        "macOS",
+        "Up to 18 hours battery life",
+        "Thunderbolt 4"
+      ]
+    }
+  ], 
+  "laptops": [
+    {
+      "id": 1,
+      "category": "laptops",
+      "name": "MacBook Pro 14 M2",
+      "image": "src/assets/images/ProductList/laptop1.png",
+      "images": [
+        "src/assets/images/ProductList/laptop1.png"
+      ],
+      "rating": 4.8,
+      "reviews": 150,
+      "price": 199999,
+      "description": "Мощный ноутбук для профессионалов",
+      "specs": ["M2", "14-inch Retina", "16 GB RAM"],
+      "features": ["macOS", "Thunderbolt 4"]
+    }
+  ], 
+  "accessories": [
+    {
+      "id": 1,
+      "category": "accessories",
+      "name": "AirPods Pro 2",
+      "image": "src/assets/images/ProductList/accessory1.png",
+      "price": 24999,
+      "rating": 4.7
+    }
+  ], 
+  "game_consoles": [
+    {
+      "id": 1,
+      "category": "game_consoles",
+      "name": "PlayStation 5",
+      "image": "src/assets/images/ProductList/ps5.png",
+      "price": 69999,
+      "rating": 4.9
+    }
+  ], 
+  "portable_speakers": [
+    {
+      "id": 1,
+      "category": "portable_speakers",
+      "name": "JBL Charge 5",
+      "image": "src/assets/images/ProductList/jbl.png",
+      "price": 17999,
+      "rating": 4.6
+    }
+  ], 
+   "monitors": [
+    {
+      "id": 1,
+      "category": "monitors",
+      "name": "LG UltraGear 27\"",
+      "image": "src/assets/images/ProductList/monitor.png",
+      "price": 32999,
+      "rating": 4.5
+    }
+  ], 
+   "printers_scanners": [
+    {
+      "id": 1,
+      "category": "printers_scanners",
+      "name": "HP LaserJet Pro",
+      "image": "src/assets/images/ProductList/printer.png",
+      "price": 28999,
+      "rating": 4.3
+    }
+  ], 
+  "tablets": [
+    {
+      "id": 1,
+      "category": "tablets",
+      "name": "iPad 10th Gen",
+      "image": "src/assets/images/ProductList/ipad.png",
+      "price": 45999,
+      "rating": 4.6
     }
   ],
+  "pc_cases_psu": [
+    {
+      "id": 1,
+      "category": "pc_cases_psu",
+      "name": "Corsair 750W PSU",
+      "image": "src/assets/images/ProductList/psu.png",
+      "price": 12999,
+      "rating": 4.4
+    }
+  ],
+
+
+
+
+
+
+
+
   "catalog": [
     {
       "key": "smartphones",

@@ -26,7 +26,7 @@ const SmartphonePage: React.FC = () => {
   const [data, setData] = useState<Smartphone | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/smartphonesPage")
+    fetch("http://localhost:4091/smartphonesPage")
       .then((res) => res.json())
       .then((json) => setData(json[0]))
       .catch((err) => console.error("Ошибка загрузки данных:", err));

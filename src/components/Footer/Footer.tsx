@@ -11,9 +11,7 @@ const Footer = () => {
             <img src={logo} alt="Behoof" className="footer__logo" />
             <span className="footer__logo-text">Behoof</span>
           </div>
-
           <span className="footer__social-title">Мы в соц сетях</span>
-
           <div className="footer__socials">
             <img src="src/assets/icons/Footer/VK.svg" alt="vk" />
             <img src="src/assets/icons/Footer/Vector.svg" alt="tiktok" />
@@ -28,13 +26,23 @@ const Footer = () => {
           <ul className="footer__list">
             <li>Поддержка пользователей</li>
             <li>FAQ & Руководства</li>
-            <li>Политика конфиденциальности</li>
+            <li>
+              <a href="/PrivacyPolicy" className="footer-link">
+                Политика конфиденциальности
+              </a>
+            </li>
+
             <li>Пользовательское соглашение</li>
           </ul>
         </div>
 
         <div className="footer__column">
-          <h4 className="footer__title">Популярные </h4>
+          <h4 className="footer__title">
+            <a href="/Articles" className="footer__title-link">
+              Популярные
+            </a>
+          </h4>
+
           <ul className="footer__list">
             <li>Смартфоны</li>
             <li>Teteras electrica</li>
@@ -53,7 +61,7 @@ const Footer = () => {
         </div>
       </div>
 
-      
+
     </footer>
   );
 };

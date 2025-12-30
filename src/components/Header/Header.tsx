@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Container from "../Сontainer/Container";
 import "./style.scss";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.svg"; 
+
 import { Search, Heart, BarChart2, User } from "lucide-react";
 import Catalog from "../Catalog/Catalog";
 
@@ -50,7 +51,7 @@ const Header: React.FC = () => {
     }
 
     const timeout = setTimeout(() => {
-      fetch(`http://localhost:3000/ProductItem?name_like=${searchQuery}`)
+      fetch(`http://localhost:4091/ProductItem?name_like=${searchQuery}`)
         .then((res) => res.json())
         .then((data) => setResults(data))
         .catch(() => setResults([]));

@@ -91,7 +91,18 @@
     font-size: 14px;
     color: #7a7e87;
     border-top: 1px solid #e3e6ef;
-  }
+  } 
+
+  .footer__title-link {
+  color: #333;
+  text-decoration: none; /* убираем подчеркивание */
+  transition: color 0.3s;
+}
+
+.footer__title-link:hover {
+  color: #ff5555; /* цвет при наведении */
+}
+  
 }
 
 @media (min-width: 640px) {

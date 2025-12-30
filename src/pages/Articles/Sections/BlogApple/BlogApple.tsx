@@ -15,7 +15,7 @@ const BlogApple: React.FC = () => {
    const postsPerPage = 2;
 
    useEffect(() => {
-      fetch("http://localhost:3000/BlogApple")
+      fetch("http://localhost:4091/BlogApple")
          .then((res) => res.json())
          .then((data) => setPosts(data))
    }, []);

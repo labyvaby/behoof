@@ -27,7 +27,7 @@ const routerConfig = createBrowserRouter([
         element: <Home />, // Главная страница
       },
       {
-        path: "Productgroup", // 👈 сюда мы заходим через /products
+        path: "Productgroup/:categoty", // 👈 сюда мы заходим через /products
         element: <Productgroup />,
       },
 

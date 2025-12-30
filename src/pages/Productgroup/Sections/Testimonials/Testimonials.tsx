@@ -12,7 +12,7 @@ const Testimonials: React.FC = () => {
     const [reviews, setReviews] = useState<TestimonialsItem[]>([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/Testimonials")
+        fetch("http://localhost:4091/Testimonials")
             .then((res) => res.json())
             .then((data) => setReviews(data))
     }, []);

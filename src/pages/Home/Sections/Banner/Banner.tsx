@@ -25,7 +25,6 @@ const Banner: React.FC = () => {
                     <br />
                     ОТ ЕЖЕДНЕВНЫХ ПОКУПОК
                 </h1>
-
                 <div className="logoContainer">
                     {storeLinks.map((store, index) => (
                         <a

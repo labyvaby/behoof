@@ -16,7 +16,7 @@ const UserComments = () => {
     const [, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:3000/UserComments')
+        fetch('http://localhost:4091/UserComments')
             .then((res) => res.json())
             .then((data: Review[]) => {
                 setReviews(data);
